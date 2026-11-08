@@ -1,6 +1,8 @@
 # Corpus humain d'avant 2020
 
-Les profils de `registres.md` ont été établis à partir des textes ci-dessous, publiés avant 2020, et jusqu'en 2021 pour les fiches produits récentes, les README et les articles sur l'IA : les assistants de rédaction grand public datent de fin 2022. Les pages modifiées après 2021 ont été écartées (par exemple un article de Siècle Digital de juillet 2020 mis à jour en 2026). Les pages web sont lues dans leur version archivée par la Wayback Machine quand c'est possible, ce qui garantit leur date. On n'en a tiré que des traits de style (longueur des phrases, formules, ponctuation, vocabulaire, manière de raisonner) et, au plus, de courts fragments. Aucun texte protégé n'est reproduit dans la skill. Les décisions de justice sont des textes officiels librement reproductibles.
+Les profils de `registres.md` ont été établis à partir des textes ci-dessous. Ils ont été publiés avant 2020, ou jusqu'en 2021 pour les fiches produits récentes, les README et les articles sur l'IA ; les assistants de rédaction grand public sont arrivés fin 2022. Une page modifiée après 2021 a été écartée, comme un article de Siècle Digital de juillet 2020 mis à jour en 2026. Quand c'était possible, la page a été lue dans sa version archivée par la Wayback Machine, qui en garantit la date.
+
+De ces textes, on n'a tiré que des traits de style (longueur des phrases, formules, ponctuation, vocabulaire, manière de raisonner) et, au plus, de courts fragments. Aucun texte protégé n'est reproduit dans la skill ; les décisions de justice sont des textes officiels librement reproductibles.
 
 | Registre | Source | Date | Ce qui en a été tiré |
 |---|---|---|---|

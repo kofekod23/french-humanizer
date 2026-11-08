@@ -1,11 +1,11 @@
 ---
 name: french-humanizer
-description: Réécrit une prose française qui sent l'IA pour qu'elle sonne écrite par une personne, sans changer ce qu'elle dit, en s'adaptant au registre (juridique, électronique, commentaire de code, lettre de motivation, courrier formel ou informel, encyclopédique, presse d'agence, régionale, sportive, économique, automobile, professionnelle, littéraire ou buzz, éditorial, fiche produit, page de marque, README, documentation technique, presse hi-fi, forum, article tech). À utiliser quand l'utilisateur dit « humanise », « rends ce texte moins IA », « ça sent ChatGPT », « réécris plus naturel », « enlève le style IA », « humaniser un texte IA », « humanizer en français », ou tape /french-humanizer.
+description: Réécrit une prose française qui sent l'IA pour qu'on la croie écrite par une personne, sans changer ce qu'elle dit, selon 37 registres (courrier, mail, juridique, presse, critique, fiche produit, README, documentation, commentaire de code, CV, lettre de motivation, LinkedIn, forum…). À utiliser quand l'utilisateur dit « humanise », « rends ce texte moins IA », « ça sent ChatGPT », « réécris plus naturel », « enlève le style IA », « humaniser un texte IA », « humanizer en français », ou tape /french-humanizer.
 ---
 
 # French humanizer (humaniseur de texte IA en français)
 
-Cette skill rend humaine une prose française produite par un modèle de langue, sans changer ce qu'elle affirme. Elle reprend la méthode de blader/humanizer (MIT) et l'adapte au français : catalogue de motifs propre au français, et profils de registre tirés de textes humains publiés avant 2020, donc avant la diffusion massive des modèles génératifs.
+Cette skill réécrit une prose française produite par un modèle de langue pour qu'elle se lise comme un texte humain, sans changer ce qu'elle affirme. Elle reprend la méthode de blader/humanizer (MIT) et l'adapte au français, avec un catalogue de motifs propre au français et des profils de registre tirés de textes humains publiés avant 2020 (jusqu'en 2021 pour quelques genres), avant que les assistants de rédaction se répandent.
 
 Le but est un texte agréable pour un lecteur humain. Tromper un détecteur d'IA n'est pas un objectif : on n'ajoute jamais de fautes volontaires.
 
@@ -15,13 +15,13 @@ Un modèle choisit la suite la plus probable, donc la formulation qui convient a
 
 ## Déroulé
 
-0. **Consulter le corpus personnel.** Si l'utilisateur a ajouté ses textes (voir « Ajouter vos textes »), lancer `python3 scripts/ajouter.py profil` et lire un ou deux textes de l'auteur du même registre que celui à réécrire (`python3 scripts/ajouter.py lister`). Ils priment sur le profil de registre pour la voix.
-1. **Repérer qui parle.** Si l'utilisateur se présente (« je suis DAF », « je suis électricien », « je suis étudiante en alternance », « je suis CTO d'une startup », « j'écris à mon propriétaire »), appliquer la section « Qui parle, à qui » ci-dessous avant de choisir le registre.
-2. **Identifier le registre.** Lire le texte et choisir le profil dans `references/registres.md` parmi trente-sept (liste complète en tête de `references/registres.md`) : juridique, électronique et technique, commentaire de code, lettre de motivation, courrier formel, courrier informel, encyclopédique, presse sportive, presse économique, critique littéraire, presse automobile, presse buzz, dépêche d'agence, presse régionale, éditorial, presse professionnelle, fiche produit e-commerce, page produit de marque, README, article tech sur l'IA, documentation technique, presse hi-fi, forum d'entraide. Pour la presse, situer d'abord le texte sur l'échelle du plus léger au plus soutenu : une IA écrit tout au même niveau moyen, un journaliste s'ancre nettement à un bout. Si aucun ne colle, appliquer les règles générales. Si le registre est ambigu et que l'enjeu le justifie (lettre officielle, acte), demander. Lire la section du profil choisi avant de réécrire.
-3. **Repérer les motifs.** Parcourir `references/motifs-ia-fr.md`, du plus fort au plus faible. Les cinq premiers justifient une correction dès la première occurrence. Ceux marqués *faible isolé* ne comptent que s'ils s'accumulent dans un même passage. Pour un long texte ou un dossier, `python3 scripts/scan.py fichier.md` donne un premier repérage chiffré (lexique, tirets, titres en capitales, connecteurs en série, uniformité des phrases).
-4. **Premier jet.** Réécrire sans tenir la structure d'origine pour acquise : fusionner, couper, réordonner si le fond y gagne. Viser les traits observés du profil (longueur des phrases, vocabulaire, ponctuation, formules d'usage).
-5. **Contrôle.** Relire le premier jet en se demandant ce qui fait encore « écrit par une IA » et le noter en deux ou trois lignes. Vérifier la fidélité : chaque nom, chiffre, date, citation, référence vient de la source ou de l'auteur.
-6. **Version finale.** Corriger ce que le contrôle a relevé.
+1. **Consulter le corpus personnel.** Si l'utilisateur a ajouté ses textes (voir « Ajouter vos textes »), lancer `python3 scripts/ajouter.py profil` et lire un ou deux textes de l'auteur du même registre que celui à réécrire (`python3 scripts/ajouter.py lister`). Ils priment sur le profil de registre pour la voix.
+2. **Repérer qui parle.** Si l'utilisateur se présente (« je suis DAF », « je suis électricien », « je suis étudiante en alternance », « je suis CTO d'une startup », « j'écris à mon propriétaire »), appliquer la section « Qui parle, à qui » ci-dessous avant de choisir le registre.
+3. **Identifier le registre.** Lire le texte et choisir l'un des 37 profils de `references/registres.md` (le sommaire est en tête du fichier). Pour la presse, situer d'abord le texte sur l'échelle du plus léger au plus soutenu : une IA écrit tout au même niveau moyen, un journaliste s'ancre nettement à un bout. Si aucun ne colle, appliquer les règles générales. Si le registre est ambigu et que l'enjeu le justifie (lettre officielle, acte), demander. Lire la section du profil choisi avant de réécrire.
+4. **Repérer les motifs.** Parcourir `references/motifs-ia-fr.md`, du plus fort au plus faible. Les cinq premiers justifient une correction dès la première occurrence. Ceux marqués *faible isolé* ne comptent que s'ils s'accumulent dans un même passage. Pour un long texte ou un dossier, `python3 scripts/scan.py fichier.md` donne un premier repérage chiffré (lexique, tirets, titres en capitales, connecteurs en série, uniformité des phrases).
+5. **Premier jet.** Réécrire sans tenir la structure d'origine pour acquise : fusionner, couper, réordonner si le fond y gagne. Viser les traits observés du profil (longueur des phrases, vocabulaire, ponctuation, formules d'usage).
+6. **Contrôle.** Relire le premier jet en se demandant ce qui fait encore « écrit par une IA » et le noter en deux ou trois lignes. Vérifier la fidélité : chaque nom, chiffre, date, citation, référence vient de la source ou de l'auteur.
+7. **Version finale.** Corriger ce que le contrôle a relevé.
 
 Quand l'utilisateur colle un texte, montrer : la liste courte des motifs trouvés (les plus forts d'abord), le premier jet, la critique, la version finale. Quand il donne un fichier, ne modifier que la prose : code, données, frontmatter, cibles de liens et citations restent intacts.
 
@@ -67,7 +67,7 @@ Dans les registres relâchés (forum, message entre amis, buzz), garder la ponct
 
 - `python3 scripts/scan.py texte.md` sur la version finale : le score doit avoir nettement baissé. Il mesure les motifs du catalogue, pas l'auteur.
 - Relire à voix haute : une phrase qu'on ne dirait jamais à ce lecteur-là est à revoir.
-- Des détecteurs d'IA existent (GPTZero, ZeroGPT, Compilatio, Lucide.ai pour le français, Pangram…). Ils se trompent dans les deux sens, signalent aussi des textes humains, et la skill n'est pas réglée pour eux : un passage réussi au détecteur n'est pas un critère de qualité, et on ne réécrit jamais un texte pour faire baisser un score de détecteur au détriment du sens.
+- Des détecteurs d'IA existent (GPTZero, ZeroGPT, Compilatio, Lucide.ai pour le français, Pangram…). Ils se trompent dans les deux sens et signalent aussi des textes humains. La skill n'est pas réglée pour eux : passer un détecteur ne dit rien de la qualité du texte, et on ne sacrifie jamais le sens pour faire baisser un score.
 
 ## Calibrer sur la voix de l'auteur
 
@@ -103,7 +103,7 @@ python3 scripts/ajouter.py <type> - --registre "article" < texte.txt
 
 Les accents sont facultatifs dans le type (`mail-envoye` fonctionne). Si le type n'est pas donné, demander lequel des quatre ; si le registre n'est pas évident, le demander aussi.
 
-- Les textes de l'auteur servent à calibrer la voix (motif de phrases, ponctuation, tutoiement ou vouvoiement, formules d'ouverture et de fin). `python3 scripts/ajouter.py profil` en donne le résumé chiffré.
+- Les textes de l'auteur servent à calibrer la voix (longueur des phrases, ponctuation, tutoiement ou vouvoiement, formules d'ouverture et de fin). `python3 scripts/ajouter.py profil` en donne le résumé chiffré.
 - Les textes de tiers servent d'exemples humains d'un registre (un vrai courrier d'administration, un vrai mail de client). Ils ne sont jamais imités comme voix de l'utilisateur.
 - Le script signale un texte « de l'auteur » qui cumule des motifs IA : s'il a été rédigé ou retouché par une IA, il fausserait la calibration. Le dire à l'utilisateur et proposer `python3 scripts/ajouter.py supprimer <fichier>`.
 - Le corpus est stocké en local dans `~/.config/french-humanizer/corpus` (ou `FRENCH_HUMANIZER_CORPUS`), jamais dans le dépôt : des mails contiennent des données personnelles. Ne pas citer un mail de tiers dans une réécriture : on s'en inspire pour le registre, on n'en recopie pas le contenu.
@@ -111,7 +111,7 @@ Les accents sont facultatifs dans le type (`mail-envoye` fonctionne). Si le type
 ## Fichiers
 
 - `references/motifs-ia-fr.md` : les 32 motifs, classés par force, avec un avant/après original pour chacun.
-- `references/registres.md` : trente-sept profils de registre, avec les traits observés sur le corpus humain, les dérives typiques d'une IA et un exemple réécrit.
+- `references/registres.md` : les 37 profils de registre, avec les traits observés sur le corpus humain, les dérives typiques d'une IA et un exemple réécrit.
 - `references/sources.md` : le corpus d'avant 2020 (jusqu'en 2021 pour quelques genres récents) qui a servi à établir les profils (liens, dates, ce qui en a été tiré).
 - `scripts/scan.py` : repérage automatique, sans dépendance, à lancer avec Python 3.
 - `scripts/ajouter.py` : ajout de textes au corpus personnel, liste, profil de voix, suppression.

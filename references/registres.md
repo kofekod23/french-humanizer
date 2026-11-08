@@ -1,6 +1,6 @@
 # Profils de registre
 
-Chaque profil repose sur des textes humains publiés avant 2020 (détail dans `sources.md`). Les traits décrits sont des observations, pas des règles absolues : un texte humain les respecte souvent, une IA les rate presque toujours. Les exemples réécrits sont originaux, sauf les courts fragments de décision de justice, textes officiels librement reproductibles.
+Chaque profil repose sur des textes humains publiés avant 2020, jusqu'en 2021 pour quelques genres (détail dans `sources.md`). Les traits décrits sont des observations, pas des règles : on les retrouve souvent chez les humains et rarement dans un premier jet d'IA. Les exemples réécrits sont originaux, sauf les courts fragments de décision de justice, textes officiels librement reproductibles.
 
 Pour chaque profil : ce qu'on observe chez les humains, ce que fait une IA, ce qu'il faut viser, un avant/après.
 
