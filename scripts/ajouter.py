@@ -19,6 +19,8 @@ Usage :
   pbpaste | python3 ajouter.py texte-modèle - --titre "billet LinkedIn"
   python3 ajouter.py lister
   python3 ajouter.py profil
+  python3 ajouter.py contextes
+  python3 ajouter.py exemples commercial --max 2
   python3 ajouter.py supprimer <fichier>
 """
 from __future__ import annotations
@@ -105,7 +107,7 @@ def ajouter(args: argparse.Namespace) -> int:
         "---",
         f"type: {type_}",
         f"voix: {voix}",
-        f"registre: {args.registre or 'non précisé'}",
+        f"registre: {' '.join(args.registre.split()).lower() if args.registre else 'non précisé'}",
         f"titre: {titre}",
         f"date_ajout: {aujourd_hui}",
         f"date_texte: {args.date or 'inconnue'}",
@@ -138,14 +140,52 @@ def fichiers(voix: str | None = None) -> list[tuple[Path, dict, str]]:
     return out
 
 
-def lister(_: argparse.Namespace) -> int:
-    liste = fichiers()
+def _cle(texte: str) -> str:
+    """Forme comparable d'un registre : sans accents, sans casse, espaces réduits."""
+    t = unicodedata.normalize("NFKD", texte.lower()).encode("ascii", "ignore").decode()
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", t).split())
+
+
+def _meme_registre(meta: dict, registre: str | None) -> bool:
+    return registre is None or _cle(registre) in _cle(meta.get("registre", ""))
+
+
+def lister(args: argparse.Namespace) -> int:
+    liste = [x for x in fichiers() if _meme_registre(x[1], getattr(args, "registre", None))]
     if not liste:
         print(f"Corpus vide ({dossier_corpus()}).")
         return 0
     for f, meta, _corps in liste:
         print(f"[{meta.get('type', '?'):<12}] {meta.get('registre', ''):<20} {meta.get('mots', '?'):>5} mots  {f.name}")
     print(f"\n{len(liste)} textes dans {dossier_corpus()}")
+    return 0
+
+
+def contextes(_: argparse.Namespace) -> int:
+    """Liste les registres présents dans le corpus, avec le nombre de textes de chacun."""
+    compte: dict[str, list[int]] = {}
+    for _f, meta, _c in fichiers():
+        r = meta.get("registre", "non précisé").lower()
+        compte.setdefault(r, [0, 0])[0 if meta.get("voix") == "auteur" else 1] += 1
+    if not compte:
+        print(f"Corpus vide ({dossier_corpus()}).")
+        return 0
+    for r, (auteur, tiers) in sorted(compte.items()):
+        print(f"{r:<28} {auteur:>3} de l'auteur  {tiers:>3} reçus")
+    return 0
+
+
+def exemples(args: argparse.Namespace) -> int:
+    """Affiche les textes d'un registre, pour s'en inspirer avant une réécriture."""
+    choisis = sorted((x for x in fichiers(args.voix) if _meme_registre(x[1], args.registre)),
+                     key=lambda x: x[0].name)[-args.max:]  # le nom commence par la date d'ajout
+    if not choisis:
+        print(f"Aucun texte pour le registre « {args.registre} ».")
+        return 0
+    for f, meta, corps in choisis:
+        role = "texte de l'auteur" if meta.get("voix") == "auteur" else "texte reçu, à ne pas imiter comme voix"
+        print(f"===== {f.name} ({meta.get('type')}, {role})")
+        print(corps.strip(), end="\n\n")
     return 0
 
 
@@ -198,7 +238,7 @@ def profil(_: argparse.Namespace) -> int:
 
 
 def main() -> int:
-    if len(sys.argv) > 1 and sys.argv[1] not in ("lister", "profil", "supprimer", "-h", "--help"):
+    if len(sys.argv) > 1 and sys.argv[1] not in ("lister", "profil", "supprimer", "contextes", "exemples", "-h", "--help"):
         ap = argparse.ArgumentParser(description="Ajoute un texte au corpus personnel.")
         ap.add_argument("type", help="mail-envoyé, texte-modèle, mail-reçu ou texte-autre")
         ap.add_argument("source", nargs="?", help="fichier texte, ou - pour l'entrée standard (par défaut)")
@@ -209,12 +249,20 @@ def main() -> int:
 
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sous = ap.add_subparsers(dest="cmd", required=True)
-    sous.add_parser("lister", help="liste les textes du corpus")
+    lst = sous.add_parser("lister", help="liste les textes du corpus")
+    lst.add_argument("--registre", help="ne garder qu'un registre (ex. : commercial)")
     sous.add_parser("profil", help="résume les habitudes d'écriture de l'auteur")
+    sous.add_parser("contextes", help="liste les registres présents et leur nombre de textes")
+    ex = sous.add_parser("exemples", help="affiche les textes d'un registre")
+    ex.add_argument("registre")
+    ex.add_argument("--max", type=int, default=3, help="nombre de textes, les plus récents (3 par défaut)")
+    ex.add_argument("--voix", choices=["auteur", "tiers"], help="seulement les textes de l'auteur ou les textes reçus")
     s = sous.add_parser("supprimer", help="retire un texte du corpus")
     s.add_argument("fichier")
     args = ap.parse_args()
-    return {"lister": lister, "profil": profil, "supprimer": supprimer}[args.cmd](args)
+    actions = {"lister": lister, "profil": profil, "supprimer": supprimer,
+               "contextes": contextes, "exemples": exemples}
+    return actions[args.cmd](args)
 
 
 if __name__ == "__main__":

@@ -32,6 +32,17 @@ Si vous dites qui vous êtes (« je suis DAF », « je suis artisan électricien
 
 ## Ajouter vos textes
 
+Dans Claude Code ou l'app desktop :
+
+```
+/french-humanizer add commercial
+[collez le texte]
+```
+
+Le mot après `add` est le contexte (commercial, mail pro, juridique, LinkedIn…). Claude demande si vous avez écrit le texte ou si vous l'avez reçu, puis l'enregistre. `/french-humanizer contextes` montre ce qui est déjà enregistré.
+
+En ligne de commande, le même ajout se fait avec le script :
+
 ```bash
 python3 scripts/ajouter.py mail-envoyé mon-mail.txt --registre "mail pro"
 python3 scripts/ajouter.py texte-modèle billet.md --registre "article"
@@ -40,7 +51,7 @@ python3 scripts/ajouter.py texte-autre courrier-banque.txt --registre "courrier 
 python3 scripts/ajouter.py profil
 ```
 
-Vos propres textes (`mail-envoyé`, `texte-modèle`) servent à calibrer votre voix ; `profil` résume vos habitudes (longueur des phrases, tutoiement, ponctuation, formules de début et de fin). Les textes des autres (`mail-reçu`, `texte-autre`) servent d'exemples humains d'un registre et ne sont jamais imités comme votre voix. Ces textes restent sur votre machine, dans `~/.config/french-humanizer/corpus`, jamais dans le dépôt Git. Dans Claude, `/french-humanizer ajouter mail-envoyé` puis collez le texte.
+Vos propres textes (`mail-envoyé`, `texte-modèle`) servent à calibrer votre voix ; `profil` résume vos habitudes (longueur des phrases, tutoiement, ponctuation, formules de début et de fin). Les textes des autres (`mail-reçu`, `texte-autre`) servent d'exemples humains d'un registre et ne sont jamais imités comme votre voix. Ces textes restent sur votre machine, dans `~/.config/french-humanizer/corpus`, jamais dans le dépôt Git.
 
 ## Repérer les motifs sans réécrire
 

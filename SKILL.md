@@ -1,6 +1,6 @@
 ---
 name: french-humanizer
-description: Réécrit une prose française qui sent l'IA pour qu'on la croie écrite par une personne, sans changer ce qu'elle dit, selon 37 registres (courrier, mail, juridique, presse, critique, fiche produit, README, documentation, commentaire de code, CV, lettre de motivation, LinkedIn, forum…). À utiliser quand l'utilisateur dit « humanise », « rends ce texte moins IA », « ça sent ChatGPT », « réécris plus naturel », « enlève le style IA », « humaniser un texte IA », « humanizer en français », ou tape /french-humanizer.
+description: Réécrit une prose française qui sent l'IA pour qu'on la croie écrite par une personne, sans changer ce qu'elle dit, selon 37 registres (courrier, mail, juridique, presse, critique, fiche produit, README, documentation, commentaire de code, CV, lettre de motivation, LinkedIn, forum…). À utiliser quand l'utilisateur dit « humanise », « rends ce texte moins IA », « ça sent ChatGPT », « réécris plus naturel », « enlève le style IA », « humaniser un texte IA », « humanizer en français », ou tape /french-humanizer. Aussi pour enrichir la skill : /french-humanizer add <contexte> (ou « ajoute ce texte au corpus ») suivi d'un texte collé.
 ---
 
 # French humanizer (humaniseur de texte IA en français)
@@ -15,7 +15,7 @@ Un modèle choisit la suite la plus probable, donc la formulation qui convient a
 
 ## Déroulé
 
-1. **Consulter le corpus personnel.** Si l'utilisateur a ajouté ses textes (voir « Ajouter vos textes »), lancer `python3 scripts/ajouter.py profil` et lire un ou deux textes de l'auteur du même registre que celui à réécrire (`python3 scripts/ajouter.py lister`). Ils priment sur le profil de registre pour la voix.
+1. **Consulter le corpus personnel.** Si l'utilisateur a ajouté des textes (voir la commande `add` plus bas), lancer `python3 scripts/ajouter.py profil`, puis `python3 scripts/ajouter.py exemples <contexte>` pour le contexte du texte à réécrire. Les textes de l'auteur priment sur le profil de registre pour la voix.
 2. **Repérer qui parle.** Si l'utilisateur se présente (« je suis DAF », « je suis électricien », « je suis étudiante en alternance », « je suis CTO d'une startup », « j'écris à mon propriétaire »), appliquer la section « Qui parle, à qui » ci-dessous avant de choisir le registre.
 3. **Identifier le registre.** Lire le texte et choisir l'un des 37 profils de `references/registres.md` (le sommaire est en tête du fichier). Pour la presse, situer d'abord le texte sur l'échelle du plus léger au plus soutenu : une IA écrit tout au même niveau moyen, un journaliste s'ancre nettement à un bout. Si aucun ne colle, appliquer les règles générales. Si le registre est ambigu et que l'enjeu le justifie (lettre officielle, acte), demander. Lire la section du profil choisi avant de réécrire.
 4. **Repérer les motifs.** Parcourir `references/motifs-ia-fr.md`, du plus fort au plus faible. Les cinq premiers justifient une correction dès la première occurrence. Ceux marqués *faible isolé* ne comptent que s'ils s'accumulent dans un même passage. Pour un long texte ou un dossier, `python3 scripts/scan.py fichier.md` donne un premier repérage chiffré (lexique, tirets, titres en capitales, connecteurs en série, uniformité des phrases).
@@ -85,9 +85,40 @@ Humanise ce texte (courrier formel) :
 [texte]
 ```
 
+## Commande `/french-humanizer add <contexte>`
+
+L'utilisateur enrichit la skill depuis Claude Code ou l'app desktop en tapant, par exemple :
+
+```
+/french-humanizer add commercial
+[texte collé]
+```
+
+`add` et `ajouter` sont synonymes. Le mot qui suit est le contexte (commercial, mail pro, juridique, LinkedIn, lettre de motivation…) ; il peut faire plusieurs mots. Dans ce cas, ne pas réécrire le texte collé : l'enregistrer tel quel.
+
+1. **Récupérer le texte.** S'il n'est pas collé avec la commande, le demander, puis attendre.
+2. **Savoir qui l'a écrit**, car un texte reçu ne doit jamais servir de modèle pour la voix de l'utilisateur. Si ce n'est pas dit (« mon mail », « un mail de client », « reçu »…), poser une seule question : l'a-t-il écrit lui-même, ou l'a-t-il reçu ? Un mail écrit par lui donne `mail-envoyé`, un autre texte écrit par lui `texte-modèle`, un mail reçu `mail-reçu`, tout autre texte d'un tiers `texte-autre`.
+3. **Retirer les données sensibles** si l'utilisateur le demande, ou les signaler (numéros de compte, téléphones, adresses de particuliers) avant d'enregistrer. Ne rien changer d'autre au texte.
+4. **Enregistrer** en passant le texte sur l'entrée standard, sans fichier intermédiaire dans le dépôt :
+
+   ```
+   python3 scripts/ajouter.py <type> - --registre "<contexte>" <<'FIN_DU_TEXTE'
+   [texte]
+   FIN_DU_TEXTE
+   ```
+
+   Lancer la commande depuis le dossier de la skill (`~/.claude/skills/french-humanizer` en général).
+5. **Rendre compte en deux lignes** : ce qui a été enregistré, sous quel contexte, et l'éventuelle alerte du script (texte « de l'auteur » qui ressemble à de la prose IA). Si le script signale cette alerte, proposer de le retirer.
+
+Autres commandes utiles : `/french-humanizer contextes` lance `python3 scripts/ajouter.py contextes` et montre ce qui est déjà enregistré ; `/french-humanizer exemples commercial` lance `python3 scripts/ajouter.py exemples commercial`.
+
+**Pendant une réécriture**, si le contexte du texte correspond à un registre du corpus (`ajouter.py contextes`), lire deux ou trois exemples avec `ajouter.py exemples <contexte>` avant le premier jet. Les textes de l'auteur règlent la voix ; les textes reçus montrent seulement comment on écrit dans ce contexte.
+
+**Si le script ne peut pas s'exécuter** (session sans terminal, comme une conversation dans l'app sans accès à l'ordinateur), le dire en une phrase et proposer la commande à lancer dans un terminal, avec le texte prêt à coller.
+
 ## Ajouter vos textes
 
-L'utilisateur peut enrichir la skill avec ses propres textes. Quand il dit « ajoute ce mail », tape `/french-humanizer ajouter mail-envoyé` ou colle un texte en demandant de l'ajouter, Claude enregistre le texte avec :
+L'utilisateur peut aussi enrichir la skill en langage courant. Quand il dit « ajoute ce mail », tape `/french-humanizer ajouter mail-envoyé` ou colle un texte en demandant de l'ajouter, Claude enregistre le texte avec :
 
 ```
 python3 scripts/ajouter.py <type> fichier.txt --registre "mail pro"
