@@ -38,6 +38,17 @@ Les profils de `registres.md` ont été établis à partir des textes ci-dessous
 | Documentation technique | Wiki ubuntu-fr, page « ssh », version du 8 novembre 2018 ([archive](https://web.archive.org/web/20190106181238/http://doc.ubuntu-fr.org/ssh)) | 2018 | Impératif, commande puis résultat, avertissements, humour, inégalité collaborative |
 | Presse hi-fi | Banc d'essai d'un amplificateur intégré, Lionel Schmitt ([PDF](https://www.hifilink.fr/wp-content/uploads/2012/12/YBA-Int%C3%A9gr%C3%A9-A100-Heritage-Nov-2016.pdf)) | 21 novembre 2016 | Mesures et composants, écoute par paramètre, première personne, défauts, prix |
 | Forum grand public | HardWare.fr, « Demande conseil achat » ([fil](https://forum.hardware.fr/hfr/Hardware/conseilsachats/demande-conseil-achat-sujet_912080_1.htm)) | 11 juin 2012 | Demande décousue, réponses courtes, renvoi au guide, ironie |
+| Réclamation consommateur | Forum Que Choisir, litige de livraison avec réponses de l'enseigne | juin-juillet 2013 | Chronologie chiffrée, émotion, question finale, clôture du fil |
+| Documentation fabricant | Legrand, guide NF C 15-100, réf. MM 216017 | décembre 2016 | Règles, valeurs, tableaux, encadrés, sigles du métier |
+| Article technique pro | Promotelec, brochure sur l'amendement 5 de la NF C 15-100 | 2015 | Règle puis « Explication », citations réglementaires, typographie des nombres |
+| Négociation tarifaire | Forumconstruire, négociation de devis d'artisans | 2007 et 2019 | Arguments chiffrés, prudence, abréviations du métier |
+| CV junior et senior | ANPE, dossier « Exemples de CV », 27 modèles | 2003 | Structures chronologique, fonctionnelle, mixte ; lignes sans verbe ; résultats chiffrés chez les seniors |
+| Article LinkedIn de cadre | LinkedIn Pulse : un DRH Groupe, un consultant en direction financière, un dirigeant marketing | 2015-2017 | Jargon authentique, sources datées, expérience propre, coquilles, question finale |
+| Billet de CTO | Medium, billet sur la dette technique par le dirigeant d'un hébergeur cloud | septembre 2019 | Fiction d'ouverture, argot, exemples maison chiffrés, métaphore filée |
+| Article produit | Medium, « Is Product Owner the new AMOA? » | novembre 2018 | Vocabulaire agile et MOA, étude datée, ironie, coquilles |
+| Critique musicale | Purecharts, critique d'album ; Télérama, brèves de concerts | 2016 | Contexte de l'artiste, instruments, comparaisons, verdict en prose |
+| Critique de cinéma | Écran Large (archive 2019 d'une critique de 2017) ; Les Inrockuptibles | juin 2017 | Pôle insolent et pôle cinéphile, scènes et références précises |
+| Forum de fans | HardWare.fr (musique) ; DVDClassik (cinéma) | 2005 | Messages courts, abréviations, listes, comparaison avec l'œuvre précédente |
 
 ## Méthode et catalogue des motifs
 
@@ -48,3 +59,7 @@ Les profils de `registres.md` ont été établis à partir des textes ci-dessous
 ## Enrichir le corpus
 
 Pour ajouter un registre, prendre deux ou trois textes humains du même genre datés d'avant 2020 (archives de forums, décisions de justice, code source ancien, archive.org), noter les traits observés selon le modèle des profils existants, rédiger un avant/après original et ajouter la ligne ici.
+
+## Genres sans corpus daté (à compléter)
+
+Le mail de remerciement après entretien, la proposition commerciale et la négociation entre entreprises n'ont pas encore de texte humain daté d'avant 2020 dans ce corpus : les pages de modèles trouvées n'avaient pas d'archive antérieure à 2022. Leurs profils reposent sur les conventions du genre. Le plus simple pour les renforcer est d'ajouter ses propres textes avec `scripts/ajouter.py`.

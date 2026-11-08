@@ -16,11 +16,12 @@ Un modèle choisit la suite la plus probable, donc la formulation qui convient a
 ## Déroulé
 
 0. **Consulter le corpus personnel.** Si l'utilisateur a ajouté ses textes (voir « Ajouter vos textes »), lancer `python3 scripts/ajouter.py profil` et lire un ou deux textes de l'auteur du même registre que celui à réécrire (`python3 scripts/ajouter.py lister`). Ils priment sur le profil de registre pour la voix.
-1. **Identifier le registre.** Lire le texte et choisir le profil dans `references/registres.md` parmi vingt-trois : juridique, électronique et technique, commentaire de code, lettre de motivation, courrier formel, courrier informel, encyclopédique, presse sportive, presse économique, critique littéraire, presse automobile, presse buzz, dépêche d'agence, presse régionale, éditorial, presse professionnelle, fiche produit e-commerce, page produit de marque, README, article tech sur l'IA, documentation technique, presse hi-fi, forum d'entraide. Pour la presse, situer d'abord le texte sur l'échelle du plus léger au plus soutenu : une IA écrit tout au même niveau moyen, un journaliste s'ancre nettement à un bout. Si aucun ne colle, appliquer les règles générales. Si le registre est ambigu et que l'enjeu le justifie (lettre officielle, acte), demander. Lire la section du profil choisi avant de réécrire.
-2. **Repérer les motifs.** Parcourir `references/motifs-ia-fr.md`, du plus fort au plus faible. Les cinq premiers justifient une correction dès la première occurrence. Ceux marqués *faible isolé* ne comptent que s'ils s'accumulent dans un même passage. Pour un long texte ou un dossier, `python3 scripts/scan.py fichier.md` donne un premier repérage chiffré (lexique, tirets, titres en capitales, connecteurs en série, uniformité des phrases).
-3. **Premier jet.** Réécrire sans tenir la structure d'origine pour acquise : fusionner, couper, réordonner si le fond y gagne. Viser les traits observés du profil (longueur des phrases, vocabulaire, ponctuation, formules d'usage).
-4. **Contrôle.** Relire le premier jet en se demandant ce qui fait encore « écrit par une IA » et le noter en deux ou trois lignes. Vérifier la fidélité : chaque nom, chiffre, date, citation, référence vient de la source ou de l'auteur.
-5. **Version finale.** Corriger ce que le contrôle a relevé.
+1. **Repérer qui parle.** Si l'utilisateur se présente (« je suis DAF », « je suis électricien », « je suis étudiante en alternance », « je suis CTO d'une startup », « j'écris à mon propriétaire »), appliquer la section « Qui parle, à qui » ci-dessous avant de choisir le registre.
+2. **Identifier le registre.** Lire le texte et choisir le profil dans `references/registres.md` parmi trente-sept (liste complète en tête de `references/registres.md`) : juridique, électronique et technique, commentaire de code, lettre de motivation, courrier formel, courrier informel, encyclopédique, presse sportive, presse économique, critique littéraire, presse automobile, presse buzz, dépêche d'agence, presse régionale, éditorial, presse professionnelle, fiche produit e-commerce, page produit de marque, README, article tech sur l'IA, documentation technique, presse hi-fi, forum d'entraide. Pour la presse, situer d'abord le texte sur l'échelle du plus léger au plus soutenu : une IA écrit tout au même niveau moyen, un journaliste s'ancre nettement à un bout. Si aucun ne colle, appliquer les règles générales. Si le registre est ambigu et que l'enjeu le justifie (lettre officielle, acte), demander. Lire la section du profil choisi avant de réécrire.
+3. **Repérer les motifs.** Parcourir `references/motifs-ia-fr.md`, du plus fort au plus faible. Les cinq premiers justifient une correction dès la première occurrence. Ceux marqués *faible isolé* ne comptent que s'ils s'accumulent dans un même passage. Pour un long texte ou un dossier, `python3 scripts/scan.py fichier.md` donne un premier repérage chiffré (lexique, tirets, titres en capitales, connecteurs en série, uniformité des phrases).
+4. **Premier jet.** Réécrire sans tenir la structure d'origine pour acquise : fusionner, couper, réordonner si le fond y gagne. Viser les traits observés du profil (longueur des phrases, vocabulaire, ponctuation, formules d'usage).
+5. **Contrôle.** Relire le premier jet en se demandant ce qui fait encore « écrit par une IA » et le noter en deux ou trois lignes. Vérifier la fidélité : chaque nom, chiffre, date, citation, référence vient de la source ou de l'auteur.
+6. **Version finale.** Corriger ce que le contrôle a relevé.
 
 Quand l'utilisateur colle un texte, montrer : la liste courte des motifs trouvés (les plus forts d'abord), le premier jet, la critique, la version finale. Quand il donne un fichier, ne modifier que la prose : code, données, frontmatter, cibles de liens et citations restent intacts.
 
@@ -32,6 +33,19 @@ Quand l'utilisateur colle un texte, montrer : la liste courte des motifs trouvé
 - **Ponctuation et typographie françaises** : voir la section suivante.
 - **Garder le niveau de langue du registre.** Ne pas rendre familier un courrier formel ni guinder un message entre amis. Tutoiement ou vouvoiement : conserver celui de la source.
 - **Ne pas aplatir les opinions.** Un texte personnel garde ses avis, ses partis pris et ses tics voulus. Un texte technique ou de référence reste neutre et sobre.
+
+## Qui parle, à qui
+
+Quand l'utilisateur dit qui il est (« je suis… », « en tant que… », « je travaille comme… ») ou à qui il écrit, la prose doit sonner comme un vrai membre de ce métier ou de cette situation.
+
+1. **Relever trois choses** : le métier ou le rôle (DAF, électricien, DRH, développeur, étudiant, locataire), le niveau (junior, senior, dirigeant), et le destinataire (client, recruteur, pair, administration, ami).
+2. **Choisir le profil de registre** le plus proche (par exemple : électricien qui écrit à un client, courrier formel ou fiche technique ; DAF qui publie sur LinkedIn, profil 32 ; CTO qui écrit un billet, profil 33 ; candidat junior, profils 4, 29 et 30).
+3. **Prendre le vocabulaire réel du métier** au niveau de l'auteur : un électricien parle de section, de calibre et de différentiel 30 mA sans les expliquer à un confrère, mais les explique à un particulier ; un DAF parle de clôture, de BFR et de trésorerie ; un développeur de déploiement, de dette, de dépendances. Un senior cite des chiffres de périmètre (équipe, budget) ; un junior parle de ses tâches et de ce qu'il a appris.
+4. **Ajuster au destinataire** : on n'écrit pas à un pair comme à un client, ni à un recruteur comme à un ami. Tutoiement ou vouvoiement selon l'usage du milieu (souvent tutoiement entre développeurs, vouvoiement avec un client ou une administration).
+5. **Ne jamais inventer d'expertise.** Le rôle déclaré règle le ton et le vocabulaire, pas les faits : on n'ajoute ni chiffre, ni référence normative, ni réalisation que l'utilisateur n'a pas donnés. S'il en faut pour que le texte sonne juste, les demander.
+6. **Si le rôle ne correspond à aucun profil**, partir du profil le plus proche et demander une ou deux phrases écrites par l'utilisateur, ou proposer d'en ajouter avec `scripts/ajouter.py`.
+
+Exemple : « Je suis artisan électricien, réécris ce mail à un client qui conteste mon devis. » Profil négociation (27) plus courrier formel (5) : phrases courtes, postes du devis nommés (fourniture, pose, mise en conformité), raison technique d'un écart en une phrase compréhensible par un particulier, proposition concrète (une option moins chère, un délai), vouvoiement, pas de jargon non expliqué.
 
 ## Ponctuation et typographie
 
@@ -96,7 +110,7 @@ Les accents sont facultatifs dans le type (`mail-envoye` fonctionne). Si le type
 ## Fichiers
 
 - `references/motifs-ia-fr.md` : les 32 motifs, classés par force, avec un avant/après original pour chacun.
-- `references/registres.md` : vingt-trois profils de registre, avec les traits observés sur le corpus humain, les dérives typiques d'une IA et un exemple réécrit.
+- `references/registres.md` : trente-sept profils de registre, avec les traits observés sur le corpus humain, les dérives typiques d'une IA et un exemple réécrit.
 - `references/sources.md` : le corpus d'avant 2020 (jusqu'en 2021 pour quelques genres récents) qui a servi à établir les profils (liens, dates, ce qui en a été tiré).
 - `scripts/scan.py` : repérage automatique, sans dépendance, à lancer avec Python 3.
 - `scripts/ajouter.py` : ajout de textes au corpus personnel, liste, profil de voix, suppression.

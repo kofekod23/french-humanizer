@@ -4,6 +4,46 @@ Chaque profil repose sur des textes humains publiés avant 2020 (détail dans `s
 
 Pour chaque profil : ce qu'on observe chez les humains, ce que fait une IA, ce qu'il faut viser, un avant/après.
 
+## Sommaire
+
+- 1. Juridique
+- 2. Électronique et technique
+- 3. Commentaires de code
+- 4. Lettre de motivation
+- 5. Courrier formel
+- 6. Courrier informel
+- 7. Encyclopédique (Wikipédia)
+- 8. Presse sportive
+- 9. Presse économique
+- 10. Critique littéraire (registre soutenu)
+- 11. Presse automobile
+- 12. Presse buzz et insolite (registre très léger)
+- 13. Dépêche d'agence (AFP)
+- 14. Presse quotidienne régionale
+- 15. Éditorial
+- 16. Presse professionnelle B2B
+- 17. Fiche produit e-commerce
+- 18. Page produit de marque
+- 19. README et documentation de projet
+- 20. Article tech sur l'IA (2020-2021)
+- 21. Documentation technique
+- 22. Presse hi-fi (banc d'essai)
+- 23. Forum d'entraide grand public
+- 24. Réclamation de consommateur (forum)
+- 25. Documentation technique de fabricant
+- 26. Article technique pour professionnels (normes)
+- 27. Négociation tarifaire
+- 28. Proposition commerciale (corpus à compléter)
+- 29. Mail de remerciement après entretien (corpus à compléter)
+- 30. CV junior
+- 31. CV senior
+- 32. Article LinkedIn de cadre (RH, finance, marketing)
+- 33. Billet de développeur ou de CTO
+- 34. Article produit (Product Owner, CPO)
+- 35. Critique musicale (presse)
+- 36. Critique de cinéma (presse)
+- 37. Forum de fans (musique, cinéma)
+
 ---
 
 ## 1. Juridique
@@ -691,6 +731,381 @@ Onze profils de plus, pour les textes qu'on rencontre le plus souvent au travail
 
 **Après :**
 > Tu fais quoi avec ? Si c'est bureautique et films, n'importe quel portable à 500 € avec un SSD fera l'affaire. Si tu joues, regarde le topic config du forum avant d'acheter, la carte graphique change tout.
+
+---
+
+# Consommation, technique pro, commerce et candidature
+
+Huit profils de plus. Trois d'entre eux (remerciement d'entretien, proposition commerciale, négociation entre entreprises) n'ont pas encore de corpus humain daté d'avant 2020 : ils sont marqués **corpus à compléter** et s'appuient sur les conventions du genre. La meilleure façon de les renforcer est d'ajouter vos propres textes avec `scripts/ajouter.py` (voir `SKILL.md`).
+
+---
+
+## 24. Réclamation de consommateur (forum)
+
+**Corpus :** forum Que Choisir, fil « Rue du commerce versus la poste colis livré ? », 21 juin au 4 juillet 2013, avec réponses de l'enseigne.
+
+**Observé chez les humains**
+- Chronologie précise : montant (450 euros), dates au format court (10/06, 11/06), mode d'envoi, numéro de service client, délai du médiateur (deux mois).
+- Émotion exprimée franchement : ponctuation multiple (« ???? », « !!!! »), points de suspension, images familières (être assise entre deux chaises, la partie de ping-pong qui commence), menace de mauvaise publicité.
+- Question finale concrète (« Quel recours si la réponse du médiateur est négative ? ») et aveu d'impuissance, signature au prénom et « Cordialement ».
+- Clôture du fil par le consommateur : issue obtenue, remerciement nominatif à la personne du service client, conseil aux autres lecteurs, « Cdlt ».
+
+**Ce que fait une IA**
+- Écrit une réclamation impeccable et impersonnelle (« Je me permets de vous contacter concernant un problème rencontré lors de ma commande »), sans date, sans montant, sans colère.
+- Ou l'inverse : une indignation générique sans faits.
+
+**À viser :** la chronologie datée et chiffrée, l'émotion de l'auteur dans ses mots, la question précise. Pour une lettre envoyée à l'entreprise (et non un post de forum), passer au profil 5 (courrier formel) en gardant les faits.
+
+**Avant :**
+> Je souhaite vous faire part de mon profond mécontentement concernant ma récente commande. En effet, plusieurs dysfonctionnements ont considérablement impacté mon expérience client. J'espère sincèrement qu'une solution rapide et satisfaisante pourra être trouvée.
+
+**Après :**
+> Commande du 3 mars, aspirateur à 189 €. Livré le 12 avec le tube cassé. J'ai ouvert un ticket le jour même (n° 48213), relancé le 19 et le 26 : toujours rien. On me demande maintenant de renvoyer l'appareil à mes frais ??? Quelqu'un a déjà obtenu un remboursement chez eux sans passer par le médiateur ?
+
+(Faits fictifs.)
+
+---
+
+## 25. Documentation technique de fabricant
+
+**Corpus :** guide Legrand « Norme NF C 15-100 », référence MM 216017, décembre 2016 (amendement 5 et arrêtés du 3 août 2016).
+
+**Observé chez les humains**
+- Adressé aux électriciens par « vous », phrases courtes et intertitres nominaux (« Plus de prises par circuit »).
+- Règles au présent avec « doit », « doivent », « interdit » ; consignes à l'infinitif (« Prévoir 1 disjoncteur par… »).
+- Valeurs et références sans commentaire : articles de la norme par leur numéro (7-701, 7-711), sections en mm², calibres en A, différentiels 30 mA de type A, AC, F ou Hpi, puissances en kW.
+- Tableaux au centre du document : type de circuit, section minimale, calibre maximal, nombre de points ; volumes de salle de bains avec codes IP et « interdit / autorisé ».
+- Encadrés « Remarque », « À noter », « Rappel », notes numérotées, sigles du métier non développés (DCL, GTL, ETEL, AGCP, TBTS).
+- Blocs commerciaux séparés et identifiés (« Les solutions Legrand ») : la règle et la promotion ne se mélangent pas.
+
+**Ce que fait une IA**
+- Explique ce qu'est un disjoncteur à un électricien, développe chaque sigle, enrobe la règle de bénéfices (« pour une installation sûre et performante »).
+- Donne des valeurs sans renvoi à l'article de la norme, ou invente un numéro d'article.
+
+**À viser :** règle, valeur, article, exception, dans cet ordre ; un tableau dès qu'il y a plus de trois valeurs ; le commercial à part. Ne jamais compléter une valeur normative de mémoire : la reprendre de la source.
+
+**Avant :**
+> Pour garantir une sécurité optimale, il est essentiel de bien dimensionner les circuits de votre installation. Le choix de la section des câbles joue en effet un rôle crucial dans la protection des personnes et des biens.
+
+**Après :**
+> Circuit prises 16 A : 2,5 mm² cuivre, 12 socles au plus. Circuit dédié plaque de cuisson : 6 mm², disjoncteur 32 A. Rappel : chaque circuit est protégé par un différentiel 30 mA (voir tableau 2 pour le type).
+
+(Valeurs à vérifier dans la norme en vigueur ; ne pas les reprendre sans contrôle.)
+
+---
+
+## 26. Article technique pour professionnels (normes)
+
+**Corpus :** brochure Promotelec sur l'amendement 5 de la NF C 15-100, applicable aux logements neufs à partir du 27 novembre 2015 (information professionnelle, le texte normatif étant celui d'AFNOR).
+
+**Observé chez les humains**
+- Structure fixe par sujet : intertitre, liste de la nouvelle règle, puis encadré « Explication » d'une ou deux phrases sur le but (sécurité, continuité de service, simplicité).
+- Sigles développés une fois puis abrégés (DDR, DCL, ECS, LES, IRVE, AGCP), citations précises : norme, amendement, partie (7-771), articles réglementaires (R. 111-18 à R. 111-18-7), dates des décrets.
+- Typographie française rigoureuse des nombres : virgule décimale (2,5 mm²), espace avant l'unité (600 mm, 0,60 m), milliers séparés (500 000 Ω), symboles ≤ et ≥.
+- Ton neutre et rassurant, avertissement final rappelant que seul le texte de la norme fait foi.
+
+**Ce que fait une IA**
+- Résume la norme en généralités (« la nouvelle réglementation renforce la sécurité des installations »), sans numéro de partie ni date d'application.
+- Mélange les versions de la norme ou invente un amendement.
+
+**À viser :** ce qui change, à partir de quand, pour quels ouvrages, pourquoi ; la référence exacte ; la mention de la source qui fait foi. Si la référence manque dans le texte d'origine, le signaler au lieu de la compléter.
+
+**Avant :**
+> La norme électrique évolue régulièrement afin de toujours mieux protéger les occupants. Les professionnels doivent donc rester attentifs aux dernières exigences pour garantir des installations conformes et performantes.
+
+**Après :**
+> Depuis l'amendement applicable aux permis déposés à partir du 1er janvier, les circuits d'éclairage des pièces d'eau passent sous un différentiel de type A. Explication : les drivers LED génèrent des courants de défaut à composante continue que le type AC détecte mal. Seul le texte AFNOR fait foi.
+
+(Exemple fictif : dates et règles à reprendre de la norme réelle.)
+
+---
+
+## 27. Négociation tarifaire
+
+**Corpus (côté client) :** Forumconstruire, fils sur la négociation de devis d'artisans (24 au 27 août 2019) et sur les remises artisan non répercutées (26 et 27 avril 2007). **Côté entreprise : corpus à compléter.**
+
+**Observé chez les humains**
+- On négocie avant la signature, rarement en cours de chantier ; par téléphone ou en face à face plutôt que par écrit.
+- Arguments concrets : comparaison de trois devis par lot, prix au m², écart entre prix public et prix artisan (remise de 30 % sur un carrelage à 21 €/m², par exemple), séparation fourniture et pose.
+- Demander d'expliquer l'écart plutôt que bluffer sur un concurrent moins cher, que les artisans repèrent vite. Méfiance envers une remise trop forte (au-delà de 10 %, signe d'un prix de départ gonflé).
+- Ton direct, abréviations du métier (MO, MOE, F et P), humour sur le marchandage.
+
+**Conventions du genre côté entreprise (sans corpus daté)**
+- Une demande ou une concession par message, chiffrée (prix unitaire, volume, délai de paiement), avec sa contrepartie (« si vous engagez 500 unités sur l'année, nous passons à 11,40 € »).
+- Justification factuelle d'une hausse (coût d'une matière, indice, date d'effet), date de validité de l'offre.
+- Aucun superlatif sur la relation (« partenariat privilégié »), aucune menace implicite.
+
+**Ce que fait une IA**
+- « Nous apprécions grandement notre collaboration et souhaiterions explorer ensemble des pistes d'optimisation tarifaire mutuellement bénéfiques. » Aucun chiffre, aucune contrepartie.
+
+**À viser :** le chiffre demandé ou concédé, la raison, la contrepartie, la date limite.
+
+**Avant :**
+> Nous apprécions grandement notre collaboration et souhaiterions explorer ensemble des pistes d'optimisation tarifaire mutuellement bénéfiques afin de pérenniser notre partenariat.
+
+**Après :**
+> Votre devis du 12 mars est à 14,20 € l'unité. Pour 2 000 pièces livrées en deux fois, nous visons 12,80 €. Si c'est possible, je signe avant le 31 et nous réglons à 30 jours au lieu de 45.
+
+(Chiffres fictifs.)
+
+---
+
+## 28. Proposition commerciale (corpus à compléter)
+
+**Conventions du genre (sans corpus daté) :** reformulation du besoin du client dans ses termes, solution proposée, livrables, calendrier en dates, prix détaillé par poste, conditions (validité, paiement), références comparables, interlocuteur nommé. Un mémoire technique de marché public suit en plus le cadre imposé par l'acheteur, sans copier-coller d'une offre à l'autre.
+
+**Ce que fait une IA**
+- « Forts de notre expertise reconnue et de notre approche innovante, nous vous proposons un accompagnement sur mesure pour relever vos défis. » Aucune reprise du besoin réel, prix global sans détail, calendrier en « phases ».
+
+**À viser :** la première page reprend le problème du client avec ses chiffres ; chaque livrable a une date et un prix ; une référence comparable nommée. Pour enrichir ce profil, ajouter de vraies propositions (anonymisées) avec `ajouter.py texte-modèle --registre "proposition commerciale"`.
+
+**Avant :**
+> Forts de notre expertise reconnue et de notre approche résolument innovante, nous vous proposons un accompagnement sur mesure pour relever ensemble vos défis digitaux.
+
+**Après :**
+> Vous perdez environ 30 % des visites mobiles sur la page panier (votre brief du 4 mars). Nous proposons un audit de cette page en 10 jours ouvrés (3 200 € HT), puis la refonte du parcours en 6 semaines (14 500 € HT). Livraison de l'audit au plus tard le 28 mars.
+
+(Chiffres fictifs.)
+
+---
+
+## 29. Mail de remerciement après entretien (corpus à compléter)
+
+**Conventions du genre (sans corpus daté) :** court (quatre à six lignes), envoyé le lendemain, il remercie, reprend un point précis de l'échange (une mission, un projet, une question posée), relie ce point à une expérience du candidat, confirme l'intérêt, sans relance insistante. Formule de fin sobre.
+
+**Ce que fait une IA**
+- Trop long, trop enthousiaste (« Je tenais à vous exprimer ma profonde gratitude pour cet échange passionnant et enrichissant »), aucun élément propre à l'entretien, triades de qualités.
+
+**À viser :** un détail que seul ce candidat pouvait mentionner, une phrase sur le lien avec son parcours, rien de plus. Pour enrichir ce profil, ajouter vos propres mails avec `ajouter.py mail-envoyé --registre "remerciement entretien"`.
+
+**Avant :**
+> Je tenais à vous exprimer ma profonde gratitude pour cet échange passionnant et enrichissant. Notre discussion a renforcé ma motivation et ma conviction que je pourrais apporter une réelle valeur ajoutée à votre équipe dynamique.
+
+**Après :**
+> Bonjour Madame Laurent,
+> Merci pour l'entretien d'hier. Le projet de migration du catalogue dont vous m'avez parlé ressemble beaucoup à celui que j'ai mené l'an dernier sur 40 000 références ; je serais heureux d'y contribuer.
+> Bien cordialement,
+
+(Exemple fictif.)
+
+---
+
+## 30. CV junior
+
+**Corpus :** dossier « Exemples de CV » de l'ANPE, 2003, 27 CV dont plusieurs de débutants (comptable débutant, chargée de communication de 22 ans, agents d'accueil et administratifs nés en 1982).
+
+**Observé chez les humains**
+- Formation en premier, puis stages et emplois d'été ou à temps partiel avec leur durée (« stage de 2 mois »).
+- Lignes sans verbe ou à l'infinitif (« Accueil téléphonique », « Saisir les commandes »), listes de logiciels et de langues, centres d'intérêt en fin de CV.
+- Formats de date hétérogènes (2000/2003, 07/2001), données personnelles fréquentes à l'époque (âge, permis), qu'on retire aujourd'hui.
+
+**Ce que fait une IA**
+- Accroche gonflée (« Jeune diplômé dynamique et passionné, doté d'excellentes capacités d'adaptation »), qualités sans preuve, verbes d'action en série identiques (« Piloté », « Optimisé ») pour un stage de deux mois.
+
+**À viser :** formation et diplôme datés, chaque stage avec une tâche concrète et si possible un chiffre (nombre d'appels, de dossiers, d'élèves), compétences vérifiables. Pas d'adjectif sur soi.
+
+**Avant :**
+> Jeune diplômée dynamique et rigoureuse, passionnée par la communication digitale, je souhaite mettre mes compétences au service d'une entreprise innovante.
+> Stage chez Agence Lumen : Gestion et optimisation des réseaux sociaux.
+
+**Après :**
+> Licence pro communication, IUT de Tours (2019).
+> Stage, Agence Lumen (avril à juin 2019) : rédaction de 3 publications par semaine pour deux clients, suivi mensuel des statistiques sur tableur.
+
+(Profil fictif.)
+
+---
+
+## 31. CV senior
+
+**Corpus :** même dossier ANPE 2003 : comptables, responsable marketing, directeur commercial, chef de projet multimédia, secrétaire de direction, avec des carrières de 1966 à 2003.
+
+**Observé chez les humains**
+- Expériences longues, parfois regroupées par domaine de compétence (CV fonctionnel) plutôt que par date.
+- Résultats chiffrés là où ils existent (progression du chiffre d'affaires, taille d'équipe, volumes traités, montants d'investissement), souvent en double devise au moment du passage à l'euro.
+- Phrases à la première personne chez certains, lignes sans verbe chez d'autres, abréviations du métier ; la longueur de carrière est assumée (« 17 ans d'expérience »).
+- Conseil de rédaction constant pour les cadres : contexte de chaque poste (secteur, équipe, budget), réalisations mesurables, pas d'ancien détail inutile.
+
+**Ce que fait une IA**
+- « Leader visionnaire doté d'une solide expérience de plus de 20 ans, reconnu pour ma capacité à fédérer les équipes et à piloter la transformation. » Réalisations vagues (« Amélioration significative des performances »).
+
+**À viser :** pour chaque poste, contexte chiffré (équipe, budget, périmètre) et deux ou trois résultats mesurables ; les débuts de carrière résumés en une ligne ; une accroche de deux lignes au plus, factuelle.
+
+**Avant :**
+> Leader visionnaire doté de plus de 20 ans d'expérience, reconnu pour ma capacité à fédérer les équipes et à piloter avec succès des transformations d'envergure.
+> Directeur commercial : amélioration significative des performances commerciales.
+
+**Après :**
+> Directeur commercial, Fabrinox (2012 à 2019) : équipe de 14 commerciaux, 38 M€ de chiffre d'affaires. Ouverture de l'Allemagne et de la Belgique (+6 M€ en trois ans), réduction du délai moyen de devis de 9 à 4 jours.
+> De 1995 à 2012 : vente et gestion de comptes dans l'industrie (détail sur demande).
+
+(Profil fictif.)
+
+---
+
+# Prises de parole de cadres et de techniciens en ligne
+
+---
+
+## 32. Article LinkedIn de cadre (RH, finance, marketing)
+
+**Corpus :** articles LinkedIn Pulse en français : « Les « nouveaux » défis des D.R.H », par un DRH Groupe (18 juillet 2017) ; « Évaluer la performance de la fonction Finance… », par un consultant en direction financière (13 décembre 2015) ; « La mort du directeur marketing « à la papa » », par un dirigeant marketing (22 octobre 2015).
+
+**Observé chez les humains**
+- Le jargon d'entreprise y est authentique et abondant : « écosystème », « donner du sens », « valeur ajoutée », « Business Partner », « agilité », « data-driven », sigles du métier (SIRH, GPEC, KPI, ROI, DMP, RTB, SEM). On ne le chasse donc pas systématiquement dans ce genre.
+- Ce qui le rend humain : des sources datées et nommées (une étude Qlik-CGI-EBG du 13/06/2017, Gartner 2012, McKinsey et EY en lien, une DRH primée nommée), des notes numérotées en fin d'article, des exemples tirés de l'expérience de l'auteur (« J'ai utilisé ce référentiel pour évaluer la performance de la DAF d'une société internationale industrielle cotée »).
+- Titres et accroches à l'humour daté (« ces 5 menaces qui empêchent les responsables marketing de dormir la nuit, et qui ne disparaîtront pas après Halloween »), intertitres en questions (« Union entre égaux ou OPA hostile ? »).
+- Longs paragraphes, énumérations en tirets avec étiquette, points de suspension, parenthèses ironiques (« (cf plus haut si vous êtes perdu) »).
+- Fautes et coquilles laissées (« passé » pour passer, « de de », « Excell »), anglicismes non traduits (challenger, white papers), tirets d'incise collés.
+- Fin sur une question au lecteur (« Et vous ! Vous sentez-vous nouveau ou ancien DRH ? »), une citation célèbre ou un lien vers l'offre de l'auteur.
+
+**Ce que fait une IA**
+- Paragraphes d'une phrase empilés, émoji en tête de ligne, accroche « Je suis ravi(e) de partager… », triade de leçons, aucune source datée, aucune expérience vécue, conclusion « Qu'en pensez-vous ? 👇 ».
+
+**À viser :** garder le vocabulaire du métier de l'auteur, mais ancrer chaque idée dans un fait daté, une source nommée ou une expérience propre ; paragraphes de vraie longueur ; une seule question au lecteur à la fin, s'il en faut une.
+
+**Avant :**
+> 🚀 Le rôle du DAF évolue !
+>
+> Aujourd'hui, il n'est plus seulement un gardien des chiffres.
+>
+> C'est un véritable business partner. 💡
+>
+> Qu'en pensez-vous ? 👇
+
+**Après :**
+> En 2019, mon équipe a passé 11 jours par mois sur la clôture. Nous sommes descendus à 6 en supprimant deux rapprochements manuels que plus personne ne lisait (et en arrêtant de refaire en Excel ce que l'ERP sortait déjà). Le temps gagné est allé aux prévisions de trésorerie que le comité de direction réclamait depuis deux ans. Vous avez fait le même exercice ? Je suis preneur de vos chiffres.
+
+(Exemple fictif.)
+
+---
+
+## 33. Billet de développeur ou de CTO
+
+**Corpus :** billet Medium « La dette technique : une supercherie mythologique pour galériens de l'IT », par le dirigeant d'un hébergeur cloud français, 26 septembre 2019.
+
+**Observé chez les humains**
+- Ouverture en scène de fiction burlesque (un développeur flagellé en comité de direction pour obtenir trois jours-homme), puis thèse provocatrice en une ligne (« la dette technique n'existe pas »).
+- Argot et familiarité assumés (daube, merdouille, se barrer, bazillions), mêlés à du vocabulaire financier précis (amortissement, ligne d'investissement, ROI, décommissionnement).
+- Exemples de la propre entreprise de l'auteur, chiffrés : un composant réécrit en deux jours après une première version de huit mois, 400 micro-services, du code de neuf ans encore en production, une base Riak abandonnée pour PostgreSQL.
+- Métaphore filée sur tout le billet (la tente Quechua, l'Algeco, l'immeuble haussmannien), apartés entre parenthèses (« note pour moi-même »), passage du « vous » au « tu ».
+- Mots anglais du métier sans traduction (churn, tooling, run, on premise), noms d'outils réels, note de bas de page vers une conférence, remerciements aux relecteurs, signature promotionnelle de l'entreprise.
+
+**Ce que fait une IA**
+- « La dette technique est un enjeu majeur pour les équipes de développement. Dans cet article, nous allons explorer ses causes, ses conséquences et les meilleures pratiques pour la gérer efficacement. » Liste de bonnes pratiques génériques, aucun exemple vécu.
+
+**À viser :** une thèse tranchée, des exemples maison chiffrés (durées, nombres de services, versions), le vocabulaire réel de l'équipe, une métaphore tenue jusqu'au bout plutôt que trois images différentes. Le ton peut être drôle et familier si c'est la voix de l'auteur.
+
+**Avant :**
+> La dette technique représente un défi majeur pour les équipes de développement. Il est essentiel de l'identifier, de la mesurer et de la réduire progressivement afin de garantir la pérennité et la performance des applications.
+
+**Après :**
+> Notre premier moteur de recherche tenait en 300 lignes de Python écrites un week-end. Il a tenu deux ans. Quand il a commencé à mettre 4 secondes par requête, on ne l'a pas « remboursé » : on l'a jeté et remplacé par Elasticsearch en trois semaines. Ce week-end-là n'était pas une dette, c'était le meilleur investissement de la boîte.
+
+(Exemple fictif.)
+
+---
+
+## 34. Article produit (Product Owner, CPO)
+
+**Corpus :** article Medium « Is Product Owner the new AMOA? », publication d'un cabinet de conseil, 12 novembre 2018.
+
+**Observé chez les humains**
+- Titre en anglais, sous-titre en français, vocabulaire produit et agile en anglais (backlog, User Stories, MVP, Time to Market, ownership), sigles de la gestion de projet française (MOA, MOE, AMOA, COPIL, PV de recette, SFD).
+- Opposition structurée entre deux rôles, illustrée par des entreprises nommées et une étude datée (rapport VersionOne 2018), un tableau comparatif.
+- Expressions idiomatiques (« c'est là que le bât blesse », « dans le même bateau »), ironie (« après tout, le cahier des charges et le PV de recette sont là pour ça ! »), néologisme (« ScrumFall »).
+- On y trouve « Soyons honnêtes cependant : », des tirets d'incise et une fin « Et vous, quelles sont vos idées ? N'hésitez pas à réagir en commentaires ! » : des motifs du catalogue, ici humains, parce qu'ils sont isolés et qu'ils précèdent un argument chiffré (un PO tient deux produits, un AMOA quatre ou cinq projets par an).
+- Coquilles (« un points clé », « venants »), mention du coauteur.
+
+**Ce que fait une IA**
+- « Dans un monde en constante évolution, le rôle du Product Owner est plus crucial que jamais. » Définitions de manuel sans comparaison chiffrée ni exemple d'entreprise.
+
+**À viser :** une distinction précise entre deux pratiques, des ordres de grandeur concrets (produits par PO, durée de sprint, taille d'équipe), un exemple d'organisation réelle ou vécue, le vocabulaire mixte que l'équipe utilise vraiment.
+
+**Avant :**
+> Dans un monde en constante évolution, le Product Owner joue un rôle plus crucial que jamais. Véritable chef d'orchestre, il assure l'alignement entre les besoins métiers et les équipes techniques.
+
+**Après :**
+> Chez nous, un PO tient un seul produit et assiste à tous les dailies. Quand on lui en a confié un deuxième, les sprints sont passés de 80 % à 55 % de stories livrées en un trimestre : il n'avait plus le temps de répondre aux questions des développeurs dans la journée.
+
+(Exemple fictif.)
+
+---
+
+# Critique culturelle et forums de fans
+
+---
+
+## 35. Critique musicale (presse)
+
+**Corpus :** critique d'album sur Purecharts (chartsinfrance.net), 16 décembre 2016 ; brèves de concerts de Télérama, 6 avril 2016.
+
+**Observé chez les humains**
+- Attaque par le contexte de l'artiste (sa réputation, l'actualité qui a pesé sur le disque) plutôt que par le son.
+- Vocabulaire des genres et des instruments (pop, soul, space rock, boîte à rythmes, bandonéon, voix rauque, timbre nasal), comparaisons avec d'autres artistes nommés, avant et après dans la carrière.
+- Images brèves et datées (« Un délicieux bain de nostalgie »), métaphores tirées de l'univers du disque, ironie affectueuse (« blanc-bec hippie »).
+- Verdict en prose, sans note dans ces exemples ; dans les brèves, une exclamation suffit (« Immanquable ! », « Réjouissant »).
+- Les paroles sont décrites par leurs thèmes plutôt que citées longuement.
+
+**Ce que fait une IA**
+- « Un album riche et profond, porté par des mélodies envoûtantes et des textes poignants, qui confirme le talent unique de l'artiste. » Aucun titre de morceau, aucun instrument, aucune comparaison.
+
+**À viser :** un morceau ou un moment précis nommé, un instrument ou un choix de production, une comparaison avec un disque antérieur ou un autre artiste, un avis tranché. Ne pas recopier de paroles.
+
+**Avant :**
+> Avec cet album riche et profond, l'artiste nous offre des mélodies envoûtantes et des textes poignants qui confirment son talent unique et sa sensibilité à fleur de peau.
+
+**Après :**
+> Fini les guitares saturées du disque précédent : un piano, une contrebasse, et la voix poussée si près du micro qu'on entend la respiration. Le troisième titre, presque parlé, est le plus beau du disque ; la reprise de clôture, en revanche, n'ajoute rien.
+
+(Exemple fictif.)
+
+---
+
+## 36. Critique de cinéma (presse)
+
+**Corpus :** critique de La Momie sur Écran Large (juin 2017, version archivée en 2019) ; critique du Jour d'après de Hong Sangsoo dans Les Inrockuptibles (juin 2017).
+
+**Observé chez les humains**
+- Deux pôles très marqués.
+  - **Écran Large** : titre-calembour (« la critique qui embaume »), intertitres pastiches en anglais ou en latin, légendes photo moqueuses, comparaisons pop culture (jeu vidéo, dessin animé), insolence assumée envers les acteurs, verdict négatif argumenté sur le montage et la post-production.
+  - **Les Inrockuptibles** : première phrase très longue qui situe le film dans l'œuvre du cinéaste avec la liste de ses trois films précédents entre parenthèses, vocabulaire cinéphile (marivaudage, grammaire, plan), contexte biographique du réalisateur, jeux de mots érudits (un pays du Matin pas si calme, un adultère au cube), émotion à la première personne du pluriel, exclamation, fiche finale (pays, année, durée).
+- Dans les deux cas : un avis net, des scènes ou des personnages précis, des noms d'acteurs et de films de référence.
+
+**Ce que fait une IA**
+- « Un film visuellement saisissant porté par des performances remarquables, qui interroge avec subtilité les thèmes de l'amour et de la trahison. » Ni scène, ni plan, ni référence, ni position.
+
+**À viser :** choisir son pôle (insolent ou cinéphile) selon le support, nommer une scène, un plan, un acteur, un film de comparaison, et trancher.
+
+**Avant :**
+> Visuellement saisissant et porté par des performances remarquables, ce film interroge avec subtilité les thèmes universels de l'amour et de la trahison, offrant une expérience cinématographique inoubliable.
+
+**Après :**
+> Tout le film tient dans le plan du dîner, filmé d'un bloc : vingt minutes de verres qu'on remplit et de reproches qu'on retient, jusqu'à ce que le zoom (le seul du film) vienne chercher le visage de l'actrice au moment où elle comprend. Le reste est plus convenu.
+
+(Exemple fictif.)
+
+---
+
+## 37. Forum de fans (musique, cinéma)
+
+**Corpus :** forum HardWare.fr, sujet sur un nouvel album de Daft Punk, 28 février 2005 ; forum DVDClassik, sujet « Vos 20 meilleurs films depuis 2000 ? », membres inscrits entre 2003 et 2005.
+
+**Observé chez les humains**
+- Messages très courts, souvent une ligne, écriture phonétique et abréviations (« c », « ke », « enkore »), accents oubliés, grossièretés, smileys du forum en code.
+- Jugements brutaux et comparaison immédiate avec le disque précédent (« encore pire que le deuxième ? »), private jokes, autodérision.
+- Chez les cinéphiles : listes numérotées avec le réalisateur après chaque titre, règles du jeu discutées (un film par réalisateur, date de sortie française ou de production), avis d'un mot (« très beau », « déçu »), ironie, abréviations (réal', vol1).
+
+**Ce que fait une IA**
+- Rédige un avis de fan comme une critique de presse, avec structure en trois paragraphes et vocabulaire choisi, ou imite le langage SMS de façon caricaturale.
+
+**À viser :** quand on réécrit un message de forum, rester bref, garder les abréviations et le ton de l'auteur, une comparaison avec l'œuvre précédente, une liste si le sujet en demande une. On n'ajoute pas de fautes que l'auteur ne fait pas.
+
+**Avant :**
+> Je dois avouer que ce nouvel opus m'a profondément déçu. Si certains morceaux conservent l'énergie caractéristique du groupe, l'ensemble manque cruellement de cohérence et d'inspiration.
+
+**Après :**
+> Écouté deux fois. Trois bons titres, le reste c'est le précédent en moins bien. Le single passe encore, mais la fin de l'album, sérieux… :/
 
 ---
 
