@@ -204,6 +204,186 @@ Les seuils d'âge et la limite non gérée doivent venir du code ou de l'auteur 
 
 ---
 
+# Presse et encyclopédie : du plus léger au plus soutenu
+
+Les six profils suivants couvrent la presse et l'encyclopédie. Ils vont du registre le plus familier (buzz) au plus soutenu (critique littéraire). Repérer d'abord où se situe le texte sur cette échelle : une IA écrit presque tout au même niveau moyen, poli et neutre, alors qu'un journaliste humain s'ancre nettement à un bout ou à l'autre.
+
+| Niveau | Registre | Marque principale |
+|---|---|---|
+| Très léger | 12. Presse buzz et insolite | Phrases courtes, interpellation, titres-blagues |
+| Léger | 8. Presse sportive | Surnoms, métaphores, minutes entre parenthèses |
+| Courant | 11. Presse automobile | Fiche technique chiffrée, comparaison aux rivales |
+| Courant soutenu | 9. Presse économique | Chiffre, comparaison, nuance, explication du jargon |
+| Neutre documenté | 7. Encyclopédique | Dates, chiffres, références, aucune adresse au lecteur |
+| Soutenu | 10. Critique littéraire | Syntaxe travaillée, verdict assumé, citations commentées |
+
+---
+
+## 7. Encyclopédique (Wikipédia)
+
+**Corpus :** article « Citroën DS » de Wikipédia en français, version du 3 avril 2019 (oldid 158110069).
+
+**Observé chez les humains**
+- Densité factuelle très forte : dates précises (« le 7 octobre 1955 »), chiffres de production, cylindrées, puissances en ch SAE et ch DIN, prix d'enchères, noms propres à chaque phrase.
+- Phrases longues, chargées de parenthèses et d'incises qui ajoutent une précision (« (uniquement les deux premières années) »), énumérations interminables séparées par des virgules ou des points-virgules.
+- Présent de narration dominant, avec des passages au futur historique et au passé simple selon les contributeurs : le texte n'est pas homogène, car plusieurs mains l'ont écrit.
+- Appels de note après les faits, références datées (périodiques, ouvrages avec ISBN et pages).
+- Le neutre n'est pas parfait : l'article humain laisse passer quelques jugements (« splendide », « révolutionnaire », « incontournable ») et même « Il convient d'ajouter ». Ces mots existent donc chez les humains ; ce qui signe l'IA, c'est leur accumulation sans faits autour.
+- Sections inégales : certaines très fouillées, d'autres réduites à une liste. Pas de conclusion, l'article s'arrête sur la dernière section.
+
+**Ce que fait une IA**
+- Équilibre artificiellement les sections, ajoute une introduction et une conclusion qui résument.
+- Remplace les faits par de la portée (« un symbole intemporel de l'innovation française »), multiplie les participes de clôture (« …, témoignant de son influence durable »).
+- Cite « de nombreux experts » au lieu de la source précise.
+
+**À viser :** un fait vérifiable par phrase, la source après le fait, aucun résumé de portée. On garde les parenthèses de précision. On ne neutralise pas un jugement s'il est attribué à une source.
+
+**Avant :**
+> La Citroën DS est une automobile emblématique qui a profondément marqué l'histoire de l'industrie automobile française. Véritable symbole d'innovation, elle témoigne du génie technique de son époque et continue de fasciner les passionnés du monde entier.
+
+**Après :**
+> La Citroën DS est produite de 1955 à 1975. Présentée au salon de Paris le 7 octobre 1955, elle reçoit 12 000 commandes dès la première journée. Elle est la première voiture de série à généraliser une centrale hydraulique pour la direction, le freinage et la suspension.
+
+---
+
+## 8. Presse sportive
+
+**Corpus :** article de Maxifoot sur les meilleurs joueurs de Ligue 1, 29 novembre 2004.
+
+**Observé chez les humains**
+- Alternance très marquée : longues phrases descriptives, puis formule courte et percutante, parfois exclamative.
+- Jargon technique du jeu (reprise, demi-volée, double parade, arrêts de jeu, passe décisive) et métaphores (avancer « inexorablement », jouer « sous l'éteignoir »).
+- Surnoms et périphrases pour éviter de répéter le nom : un joueur devient « le géant suédois », un milieu infatigable « le petit homme aux trois poumons », une équipe ses habitants (« les Istréens »).
+- Minutes entre parenthèses (« (5e) »), âge et club entre parenthèses à la présentation du joueur, abréviations (pts, L1), ordinaux (16e).
+- Ton engagé, élogieux ou ironique ; le journaliste prend parti.
+
+**Ce que fait une IA**
+- Raconte le match de façon neutre et équilibrée, sans parti pris ni image.
+- Abuse de « véritable démonstration », « performance XXL », « au terme d'un match à suspense », et conclut par une morale sur l'esprit d'équipe.
+
+**À viser :** le fait de jeu précis (qui, quelle minute, quel geste), une image de journaliste par paragraphe au plus, un avis tranché, la périphrase pour varier les noms.
+
+**Avant :**
+> Au terme d'un match riche en émotions, Saint-Aubin s'est imposé grâce à une véritable démonstration collective. Cette victoire témoigne de la solidité retrouvée de l'équipe, qui confirme ainsi son statut de prétendant au titre.
+
+**Après :**
+> Saint-Aubin a tué le match en dix minutes. Morel ouvre sur coup franc (12e), Diallo double la mise d'une frappe croisée (21e). Derrière, Ferrand n'a eu qu'un arrêt à faire. Les Albins restent à trois points du leader.
+
+(Club et joueurs fictifs. Dans un vrai texte, noms et minutes viennent de la source.)
+
+---
+
+## 9. Presse économique
+
+**Corpus :** article de La finance pour tous sur les bénéfices du CAC 40, 29 mars 2018 (vulgarisation économique).
+
+**Observé chez les humains**
+- Chapeau court qui donne le chiffre principal et sa cause, puis corps en intertitres qui vont de la donnée au contexte puis à l'interprétation.
+- Chiffres en notation française : virgule décimale, espace avant % (« 24 % »), « milliards d'euros » en toutes lettres, comparaison systématique avec une année antérieure.
+- Jargon employé puis expliqué dans la phrase suivante (bénéfice net cumulé, marge, dividende).
+- Nuance explicite : la bonne nouvelle est « à relativiser », les profits restent sous leur niveau d'avant 2008.
+- Pas de conclusion formelle : l'article finit sur un dernier point d'analyse.
+
+**Ce que fait une IA**
+- Parle de « dynamique positive », de « résilience », de « contexte économique incertain » sans chiffre.
+- Donne un chiffre sans point de comparaison, ou un pourcentage sans base.
+- Clôt sur une perspective générale (« l'avenir dira si cette tendance se confirme »).
+
+**À viser :** chiffre, base de comparaison, cause, limite. Une phrase d'explication pour chaque terme technique si le lectorat est grand public ; aucune pour un lectorat spécialisé.
+
+**Avant :**
+> Le groupe Vernet affiche une dynamique particulièrement positive, témoignant de leur remarquable résilience dans un contexte économique en constante évolution. Cette performance solide ouvre des perspectives encourageantes pour l'avenir.
+
+**Après :**
+> Le groupe Vernet a dégagé 412 millions d'euros de bénéfice net en 2017, 18 % de plus qu'en 2016. La hausse est à relativiser : en 2007, avant la crise, il gagnait davantage.
+
+(Entreprise et chiffres fictifs. Dans un vrai texte, ils viennent de la source.)
+
+---
+
+## 10. Critique littéraire (registre soutenu)
+
+**Corpus :** supplément « Des livres » du quotidien Le Monde, 2 septembre 2005 (rentrée littéraire).
+
+**Observé chez les humains**
+- Grande variété de longueur : périodes longues à incises et subordonnées, puis phrase nominale sèche qui tranche (un « Pas de quoi s'attarder. » après un paragraphe ample).
+- Syntaxe travaillée : inversions (« Dans leur cohorte dispersée, on signale… »), points-virgules pour opposer, subjonctif dans les tournures de nuance.
+- Vocabulaire soutenu, métaphores filées, mais touches familières ou ironiques volontaires qui empêchent la pompe.
+- Verdict assumé (« un bon roman », « un livre rarissime ») ou réserve précise (« on aurait préféré… »), jamais un éloge générique.
+- Citations du livre, parfois longues, suivies d'un commentaire qui en tire le sens.
+- Attaque vive (« Lire Houellebecq, enfin. ») et chute sur une image qui prolonge la lecture.
+
+**Ce que fait une IA**
+- Accumule les qualificatifs creux : « une plume ciselée », « un récit poignant », « une œuvre puissante qui interroge notre rapport au monde », « une lecture incontournable ».
+- Ne cite pas le texte, ou le cite sans le commenter.
+- Garde un rythme régulier, sans phrase courte qui tranche, et conclut par une recommandation de lecture.
+
+**À viser :** une thèse sur le livre dès l'attaque, une citation courte commentée, un vrai reproche ou un vrai éloge précis, des ruptures de rythme. Le registre soutenu n'interdit pas une phrase de quatre mots ; il les rend plus efficaces.
+
+**Avant :**
+> Dans ce roman poignant, l'auteur nous offre un récit puissant qui interroge avec finesse notre rapport à la mémoire. Servi par une plume ciselée, ce texte bouleversant s'impose comme une lecture incontournable de cette rentrée littéraire.
+
+**Après :**
+> Le narrateur oublie tout, sauf ce qu'il voudrait oublier : c'est le ressort du livre, et l'auteur le tend jusqu'à la dernière page sans jamais l'expliquer. On regrette le chapitre central, trop long, où la phrase s'écoute. Le reste tient.
+
+---
+
+## 11. Presse automobile
+
+**Corpus :** dossier de L'argus sur le Peugeot 3008 de deuxième génération (publié en mai 2014, mis à jour en février 2016) ; essai du Peugeot 3008 (2009-2016) sur Fiches-Auto.fr.
+
+**Observé chez les humains**
+- Fiche technique dans le texte : cylindrée en cm³ (1 199 cm³), puissance en ch, plateforme (EMP2), boîte (automatique à convertisseur, six rapports), dimensions en mètres (4,40 m contre 4,37 m), chiffres de ventes arrondis.
+- Comparaison systématique avec la gamme maison et les concurrentes, citées par leur nom.
+- Ton informatif avec un avis : on salue un point fort, on relève un point faible, souvent avec une réserve modérée (« perfectible », « rien de très grave »).
+- Chez l'essayeur passionné : « on » et « vous », expressions familières (« crapahuter », « prendre son pied »), points de suspension, liste qualités et défauts en fragments, verdict final qui laisse sa part au goût.
+- Jeux de mots surtout dans les intertitres (« Près du corps »), rarement dans le titre.
+
+**Ce que fait une IA**
+- Parle de « design audacieux », « habitacle raffiné », « expérience de conduite dynamique », « motorisations performantes » sans chiffre.
+- Ne nomme pas les concurrentes, ou toutes à la fois sans comparaison réelle.
+
+**À viser :** le chiffre et l'unité, la rivale nommée, un défaut réel, un verdict. Les intertitres peuvent jouer sur les mots, le corps du texte reste précis.
+
+**Avant :**
+> Avec son design audacieux et son habitacle raffiné, le nouveau SUV offre une expérience de conduite dynamique et confortable. Ses motorisations performantes et efficientes en font un choix idéal pour les familles modernes.
+
+**Après :**
+> Le Kerval gagne 8 cm en longueur (4,45 m) et reprend la plateforme de la berline de la marque. Le coffre atteint 520 litres, autant que ses deux principales rivales. Le trois-cylindres de 130 ch suffit en ville mais s'essouffle à pleine charge sur autoroute.
+
+(Modèle et données fictifs. Dans un vrai texte, chiffres et rivales nommées viennent de la source.)
+
+---
+
+## 12. Presse buzz et insolite (registre très léger)
+
+**Corpus :** article de Demotivateur sur les titres de presse les plus drôles de 2015 (16 novembre 2015) ; article de L'Avenir (Belgique) sur les pires selfies de 2015 (13 décembre 2015).
+
+**Observé chez les humains**
+- Phrases courtes, souvent de 8 à 15 mots, paragraphes d'une à trois phrases.
+- Expressions idiomatiques (« tirer le portrait », « en prendre pour son grade »), vocabulaire courant, peu ou pas de technique.
+- Interpellation directe du lecteur (« vous »), « nous » éditorial, rappel des articles précédents.
+- Humour par les intertitres-blagues (« Souriez, ça vient d'exploser ! », « Direction la prison ») plus que par le corps du texte ; ironie légère, pas méchante.
+- Points d'exclamation surtout dans les titres et intertitres. Pas d'émojis dans ces articles de 2015.
+- Liste numérotée, chaque entrée réduite à son anecdote ; aucune conclusion, l'article finit sur le dernier exemple ou un renvoi.
+
+**Ce que fait une IA**
+- Met des émojis partout, un point d'exclamation à chaque phrase, des « Accrochez-vous ! », « Vous n'allez pas en croire vos yeux ! ».
+- Ajoute une introduction qui annonce la liste et une conclusion qui invite à commenter et partager.
+
+**À viser :** l'anecdote d'abord, la blague dans l'intertitre, des phrases très courtes, un « vous » naturel, et on s'arrête quand c'est fini.
+
+**Avant :**
+> Accrochez-vous, car voici les selfies les plus fous de l'année ! 😱 Vous n'allez tout simplement pas en croire vos yeux ! Découvrez sans plus attendre notre sélection incroyable qui va vous faire rire aux éclats ! 🤣
+
+**Après :**
+> **Direction la prison**
+> Il a posé tout sourire devant la vitrine qu'il venait de casser. La photo a fait le tour de Facebook, puis du commissariat.
+
+(Anecdote à reprendre de la source.)
+
+---
+
 ## Registre non listé
 
 Appliquer le catalogue de motifs et les règles fixes de `SKILL.md`, puis se demander qui lit, ce qu'il sait déjà et ce qu'il attend d'un texte de ce genre. Un échantillon de la voix de l'auteur, ou deux ou trois textes humains du même genre publiés avant 2020, donnent le meilleur repère.

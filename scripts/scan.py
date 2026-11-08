@@ -165,6 +165,14 @@ def analyser(nom: str, brut: str) -> Rapport:
         r.constats.append(Constat(8, "Tiret comme ponctuation", extrait(texte, m.start(), m.end()),
                                   numero_ligne(texte, m.start()), 2))
 
+    for m in re.finditer(r"(?<=\w) - (?=\w)", texte):  # trait d'union isolé employé comme tiret
+        r.constats.append(Constat(8, "Trait d'union employé comme tiret", extrait(texte, m.start(), m.end()),
+                                  numero_ligne(texte, m.start()), 1))
+
+    for m in re.finditer(r"\b\d+(ème|eme|ième)s?\b", texte):
+        r.constats.append(Constat(26, "Ordinal à corriger (2e, 16e)", extrait(texte, m.start(), m.end(), 10),
+                                  numero_ligne(texte, m.start()), 1))
+
     for m in re.finditer(r"^#{1,6}\s+(.+)$", texte, flags=re.M):
         if titre_en_capitales(m.group(1)):
             r.constats.append(Constat(23, "Titre en capitales à l'anglaise", m.group(1).strip(),

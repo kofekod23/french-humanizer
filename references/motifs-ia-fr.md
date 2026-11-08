@@ -31,7 +31,7 @@ La base est le guide « Signs of AI writing » du WikiProject AI Cleanup, tel qu
 
 | # | Motif | Avant | Après |
 |---|---|---|---|
-| 14 | **Vocabulaire IA français** | « véritable levier », « incontournable », « crucial », « essentiel », « clé » (adjectif), « enjeu majeur », « écosystème », « paysage numérique », « à l'ère du numérique », « dans un monde en constante évolution », « plus que jamais », « pierre angulaire », « atout majeur », « mettre en lumière », « témoigner de », « s'inscrire dans une démarche », « naviguer les défis », « démystifier », « révolutionner », « sans précédent », « booster », « fluide » | Mot simple et précis, ou rien. |
+| 14 | **Vocabulaire IA français** | « véritable levier », « incontournable », « crucial », « essentiel », « clé » (adjectif), « enjeu majeur », « écosystème », « paysage numérique », « à l'ère du numérique », « dans un monde en constante évolution », « plus que jamais », « pierre angulaire », « atout majeur », « mettre en lumière », « témoigner de », « s'inscrire dans une démarche », « naviguer les défis », « démystifier », « révolutionner », « sans précédent », « booster », « fluide » | Mot simple et précis, ou rien. Ces mots existent aussi chez les humains : la version 2019 de l'article Wikipédia « Citroën DS » contient « révolutionnaire », « incontournable » et « Il convient d'ajouter ». Ce qui signe l'IA, c'est leur grappe sans faits autour. |
 | 15 | **Importance gonflée** | « marquant un tournant décisif », « malgré les défis, continue de prospérer », « l'avenir s'annonce prometteur » | Garder le fait, retirer la portée ; finir sur le dernier fait concret. |
 | 16 | **Participe présent décoratif** | « …, témoignant de son engagement », « …, soulignant ainsi l'importance de… », « …, reflétant une volonté de… » | Ne garder que ce que la source établit, dans une phrase à part si besoin. |
 | 17 | **Langage promotionnel** | « niché au cœur de », « un cadre idyllique », « une expérience unique » | Dire ce qu'est la chose : « à 200 m de la gare ». |
@@ -48,7 +48,7 @@ La base est le guide « Signs of AI writing » du WikiProject AI Cleanup, tel qu
 | 23 | **Titres en capitales à l'anglaise** | « Les Avantages Clés De La Méthode » | « Avantages de la méthode ». Seule la première lettre et les noms propres prennent la majuscule. Très fort en français. |
 | 24 | **Gras décoratif, liste à étiquettes** | « **Performance :** la performance s'améliore » ; puces partout | Retirer le gras ; une liste étiquetée devient de la prose. |
 | 25 | **Titres décoratifs, émojis** | « 🚀 Phase de lancement : », « Le mot de la fin » | Nommer ce que contient la section ; pas d'émoji. |
-| 26 | **Guillemets droits anglais** (*faible isolé*) | `il a dit "le projet"` | « le projet », avec espaces, dans un registre soigné. |
+| 26 | **Typographie anglaise** (*faible isolé*) | `il a dit "le projet"`, « 16ème », « 24% » | « le projet », 16e, 24 %, dans un registre soigné (voir la section Ponctuation de `SKILL.md`). |
 
 ## E. Restes de conversation et de brouillon
 

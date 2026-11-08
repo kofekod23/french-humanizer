@@ -7,7 +7,7 @@
 
 **French Humanizer** est une skill pour Claude Code et Claude.ai qui réécrit un texte français généré par une IA (ChatGPT, Claude, Gemini, Mistral…) pour qu'il sonne écrit par une personne, **sans changer ce qu'il dit**. C'est l'adaptation française de [blader/humanizer](https://github.com/blader/humanizer), avec un catalogue de motifs propre au français et des profils de registre établis sur des textes humains publiés avant 2020.
 
-> **English.** French Humanizer is an agent skill for Claude Code, Claude.ai and other skill-compatible agents that removes the signs of AI-generated writing from **French** text. It ships 32 French-specific AI writing patterns, six register profiles (legal, electronics, code comments, cover letters, formal letters, informal notes) built from pre-2020 human writing, and a dependency-free Python scanner usable in CI.
+> **English.** French Humanizer is an agent skill for Claude Code, Claude.ai and other skill-compatible agents that removes the signs of AI-generated writing from **French** text. It ships 32 French-specific AI writing patterns, twelve register profiles (legal, electronics, code comments, cover letters, formal and informal letters, encyclopedic, sports, business, car and literary press, light buzz media) built from pre-2020 human writing, and a dependency-free Python scanner usable in CI.
 
 ## Pourquoi un humanizer spécifique au français
 
@@ -23,7 +23,7 @@ Les humanizers existants sont pensés pour l'anglais. Un texte IA en français a
 
 Et surtout, un bon texte humain ne s'écrit pas pareil selon qu'il s'agit d'un arrêt de la Cour de cassation, d'une réponse sur un forum d'électronique ou d'un mot aux voisins. La skill commence donc par identifier le registre.
 
-## Les six registres
+## Les douze registres
 
 | Registre | Corpus humain d'avant 2020 | Ce que la skill vise |
 |---|---|---|
@@ -33,6 +33,14 @@ Et surtout, un bon texte humain ne s'écrit pas pareil selon qu'il s'agit d'un a
 | Lettre de motivation | Forum CommentÇaMarche (2012) | Faits vérifiables plutôt qu'adjectifs |
 | Courrier formel | Modèles de lettres administratives (2014) | Faits datés, demande, délai, formule de politesse classique |
 | Courrier informel | Forums CommentÇaMarche et LinuxFr (2011 à 2015) | Phrases courtes, détail concret, fin brève |
+| Encyclopédique | Wikipédia, version archivée de 2019 | Un fait vérifiable par phrase, source après le fait |
+| Presse buzz et insolite | Demotivateur, L'Avenir (2015) | Anecdote d'abord, blague dans l'intertitre |
+| Presse sportive | Maxifoot (2004) | Fait de jeu précis, surnoms, avis tranché |
+| Presse automobile | L'argus (2014-2016), Fiches-Auto | Chiffres et unités, rivale nommée, vrai défaut |
+| Presse économique | La finance pour tous (2018) | Chiffre, base de comparaison, cause, limite |
+| Critique littéraire | Le Monde des livres (2005) | Syntaxe soutenue, ruptures de rythme, verdict assumé |
+
+Pour la presse, la skill situe d'abord le texte entre registre très léger et registre soutenu : une IA écrit tout au même niveau moyen, un journaliste s'ancre nettement à un bout.
 
 Le détail et les liens sont dans [`references/sources.md`](references/sources.md).
 
@@ -106,6 +114,10 @@ Il signale le vocabulaire IA, les structures « pas X, mais Y », les tirets, le
 | [`references/sources.md`](references/sources.md) | Corpus d'avant 2020 et méthode |
 | [`scripts/scan.py`](scripts/scan.py) | Repérage automatique |
 
+## Ponctuation française
+
+Pas de tiret cadratin ni demi-cadratin en guise de ponctuation, guillemets « », espace insécable avant ; : ! ? et %, ordinaux 2e et 16e, nombres 1 455 746 et 4,40 m, titres sans capitales à l'anglaise. Dans les registres relâchés (forum, message entre amis), la ponctuation de l'auteur est conservée. Le détail est dans [`SKILL.md`](SKILL.md).
+
 ## Ce que la skill ne fait pas
 
 Elle ne cherche pas à tromper les détecteurs d'IA (GPTZero, Compilatio, Turnitin…) et n'ajoute jamais de fautes volontaires. Elle rend un texte plus clair et plus naturel pour un lecteur humain.
@@ -115,6 +127,8 @@ Elle ne cherche pas à tromper les détecteurs d'IA (GPTZero, Compilatio, Turnit
 **Quelle différence avec blader/humanizer ?** La méthode est la même (repérage, premier jet, critique, version finale). Le catalogue est réécrit pour le français et la skill ajoute des profils de registre fondés sur un corpus humain français.
 
 **Fonctionne-t-elle avec ChatGPT ou Mistral ?** La skill tourne dans un agent compatible avec le format SKILL.md. Elle humanise des textes produits par n'importe quel modèle.
+
+**Peut-on vérifier si le texte passe les détecteurs d'IA ?** Des détecteurs existent (GPTZero, ZeroGPT, Compilatio, Lucide.ai pour le français, Pangram) et vous pouvez y soumettre le résultat. Ils se trompent dans les deux sens et signalent aussi des textes humains ; la skill n'est pas réglée pour eux. Pour mesurer ce qu'elle corrige, utilisez `scripts/scan.py` avant et après.
 
 **Peut-on ajouter un registre ?** Oui : la marche à suivre est en bas de [`references/sources.md`](references/sources.md). Les contributions sont bienvenues.
 
