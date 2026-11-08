@@ -156,12 +156,16 @@ Les seuils d'âge et la limite non gérée doivent venir du code ou de l'auteur 
 
 ## 4. Lettre de motivation
 
-**Corpus :** brouillon de candidature spontanée soumis à relecture sur le forum Droit-Finances de CommentÇaMarche (fil clos en décembre 2012) et conseils des intervenants.
+**Corpus :** brouillon de candidature spontanée soumis à relecture sur le forum Droit-Finances de CommentÇaMarche (fil clos en décembre 2012) et conseils des intervenants ; dossier ANPE « Exemples de lettres de motivation » (2003), 23 lettres complètes de débutants et de profils expérimentés (réponses à annonce, candidatures spontanées avec ou sans CV, lettres sur recommandation).
 
 **Observé chez les humains**
 - Plan classique en trois temps : situation actuelle, intérêt pour l'entreprise, compétences, puis demande d'entretien.
 - Formules d'usage sincères mais toutes faites : « je me permets de vous proposer ma candidature », « je reste à votre entière disposition », formule de politesse complète.
 - Défauts humains typiques : phrases longues, répétition d'un mot fétiche (ici « véritable »), compétences listées sans réalisation concrète, quelques fautes d'accord. Ce sont ces défauts que relèvent les relecteurs, avec un conseil récurrent : une accroche de quatre ou cinq lignes au plus, du concret.
+- Dans les lettres de l'ANPE, l'accroche varie selon le cas : référence à l'annonce reprise point par point, observation sur l'entreprise (un article de presse professionnelle sur sa croissance, son nom vu dans des rapports), nom de la personne qui recommande, ou même une remarque personnelle (passer tous les jours devant la pépinière à vélo).
+- Les profils expérimentés donnent des faits : années d'expérience, machines ou logiciels maîtrisés, taille d'équipe encadrée, chiffre d'affaires, types de chantiers ; certains passent en liste à puces pour leurs compétences ou leurs réalisations, voire en mots-clés repris de l'annonce.
+- La fin annonce presque toujours une relance précise (« je vous appellerai dans une semaine », « dans quinze jours ») avant la formule de politesse classique.
+- Quelques lettres osent un ton inhabituel (carte de quelques lignes, humour d'un chauffeur routier) : le registre suit la personne et le poste.
 - Ce qui sonne humain dans une bonne lettre : un fait vérifiable (un chiffre, un projet, un nom de produit de l'entreprise), une raison personnelle et précise de postuler, une seule qualité démontrée plutôt que cinq affirmées.
 
 **Ce que fait une IA**

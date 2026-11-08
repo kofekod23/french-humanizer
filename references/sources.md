@@ -49,6 +49,7 @@ Les profils de `registres.md` ont été établis à partir des textes ci-dessous
 | Critique musicale | Purecharts, critique d'album ; Télérama, brèves de concerts | 2016 | Contexte de l'artiste, instruments, comparaisons, verdict en prose |
 | Critique de cinéma | Écran Large (archive 2019 d'une critique de 2017) ; Les Inrockuptibles | juin 2017 | Pôle insolent et pôle cinéphile, scènes et références précises |
 | Forum de fans | HardWare.fr (musique) ; DVDClassik (cinéma) | 2005 | Messages courts, abréviations, listes, comparaison avec l'œuvre précédente |
+| Lettre de motivation | ANPE, dossier « Exemples de lettres de motivation », 23 lettres ([PDF](https://carrefoursemploi.org/telechargement/stat125Minisiteulis2009.pdf)) | 2003 | Accroches selon le cas, faits chez les expérimentés, relance datée, formule classique |
 
 ## Méthode et catalogue des motifs
 
