@@ -1,8 +1,8 @@
 # French Humanizer : humaniser un texte IA en français
 
-Skill pour Claude Code et Claude.ai qui réécrit un texte français produit par une IA pour qu'il se lise comme un texte humain, sans changer ce qu'il affirme. C'est l'adaptation française de [blader/humanizer](https://github.com/blader/humanizer).
+Cette skill pour Claude Code et Claude.ai réécrit un texte français produit par une IA pour qu'on le croie écrit par une personne, sans changer ce qu'il affirme. C'est l'adaptation française de [blader/humanizer](https://github.com/blader/humanizer).
 
-*English: a Claude Code skill that rewrites AI-generated French text so it reads like human writing. 32 French-specific AI writing patterns, 37 register profiles built from human texts published before 2020, a local corpus for your own voice, and a Python scanner.*
+*In English: this Claude Code skill rewrites French text written by an AI so that it reads as if a person wrote it. It checks 32 patterns specific to French and follows 37 register profiles, drawn from human writing published mostly before 2020. You can add your own emails so rewrites match your voice, and a small Python script flags the patterns without rewriting anything.*
 
 ## Installation
 
@@ -10,7 +10,7 @@ Skill pour Claude Code et Claude.ai qui réécrit un texte français produit par
 git clone https://github.com/kofekod23/french-humanizer.git ~/.claude/skills/french-humanizer
 ```
 
-Pour un seul projet, clonez dans `.claude/skills/french-humanizer`. Sur Claude.ai ou Claude Desktop, téléchargez le dépôt en ZIP et ajoutez-le comme skill dans les réglages. Les autres agents qui lisent le format `SKILL.md` (Codex, Cursor, Gemini CLI…) l'utilisent tel quel.
+Pour un seul projet, clonez dans `.claude/skills/french-humanizer`. Sur Claude.ai ou Claude Desktop, téléchargez le dépôt en ZIP et ajoutez-le comme skill dans les réglages. Les autres agents qui lisent les fichiers `SKILL.md` (Codex, Cursor, Gemini CLI…) peuvent l'utiliser tel quel.
 
 ## Utilisation
 
@@ -20,13 +20,13 @@ Pour un seul projet, clonez dans `.claude/skills/french-humanizer`. Sur Claude.a
 [texte à réécrire]
 ```
 
-Ou simplement : « humanise ce courrier », « ce commentaire de code sent l'IA ».
+On peut aussi le demander en toutes lettres : « humanise ce courrier », « ce commentaire de code sent l'IA ».
 
 > **Avant :** À l'ère du numérique, la gestion des sauvegardes constitue un enjeu majeur pour toute entreprise.
 >
 > **Après :** Une sauvegarde ne sert que si on sait la restaurer. Nous copions la base chaque nuit et, une fois par mois, nous restaurons la copie de la veille sur une machine de test.
 
-Les détails concrets de la version réécrite viennent de l'auteur : s'ils manquent, la skill les demande au lieu de les inventer.
+Les détails de la version réécrite (chaque nuit, une fois par mois) doivent venir de l'auteur. S'ils manquent, la skill les demande au lieu de les inventer.
 
 Si vous dites qui vous êtes (« je suis DAF », « je suis artisan électricien, j'écris à un client »), la réécriture prend le vocabulaire et le niveau de ce métier, et s'adapte au destinataire. Pour coller à votre propre style, joignez deux ou trois paragraphes que vous avez écrits.
 
@@ -40,7 +40,7 @@ python3 scripts/ajouter.py texte-autre courrier-banque.txt --registre "courrier 
 python3 scripts/ajouter.py profil
 ```
 
-Vos propres textes (`mail-envoyé`, `texte-modèle`) servent à calibrer votre voix ; `profil` résume vos habitudes (longueur des phrases, tutoiement, ponctuation, formules de début et de fin). Les textes des autres (`mail-reçu`, `texte-autre`) servent d'exemples humains d'un registre et ne sont jamais imités comme votre voix. Le tout reste sur votre machine, dans `~/.config/french-humanizer/corpus`, hors du dépôt Git. Dans Claude, `/french-humanizer ajouter mail-envoyé` puis collez le texte.
+Vos propres textes (`mail-envoyé`, `texte-modèle`) servent à calibrer votre voix ; `profil` résume vos habitudes (longueur des phrases, tutoiement, ponctuation, formules de début et de fin). Les textes des autres (`mail-reçu`, `texte-autre`) servent d'exemples humains d'un registre et ne sont jamais imités comme votre voix. Ces textes restent sur votre machine, dans `~/.config/french-humanizer/corpus`, jamais dans le dépôt Git. Dans Claude, `/french-humanizer ajouter mail-envoyé` puis collez le texte.
 
 ## Repérer les motifs sans réécrire
 
@@ -49,7 +49,7 @@ python3 scripts/scan.py article.md
 python3 scripts/scan.py docs/*.md --fail-above 40   # pour la CI
 ```
 
-Le script, sans dépendance, liste les passages suspects et donne un score de 0 à 100. C'est un outil de relecture : un score ne dit pas qui a écrit le texte.
+Le script n'a aucune dépendance. Il liste les passages suspects et donne un score de 0 à 100, utile pour relire ; il ne dit pas qui a écrit le texte.
 
 ## Comment la skill a été construite
 
@@ -67,9 +67,9 @@ Les 37 profils de registre ont été établis en lisant des textes humains publi
 - articles de cadres et de développeurs sur les réseaux professionnels et les plateformes de blogs ;
 - forums d'entraide, de consommateurs et de fans.
 
-Cette lecture a corrigé une idée reçue : plusieurs « tics d'IA » existent chez les humains, comme un éditorial qui finit en deux mots ou une page produit en triades. Chez l'humain, le procédé est rare et porte toujours un fait précis. La skill corrige donc le procédé appliqué à vide, pas chaque occurrence.
+En lisant ces textes, on retrouve chez les humains plusieurs « tics d'IA » : un éditorial qui finit en deux mots, une page produit écrite en triades. Mais chez eux le procédé est rare et porte presque toujours un fait précis. La skill corrige donc le procédé appliqué à vide, pas chaque occurrence.
 
-Le dépôt ne recopie aucun texte source : il contient des traits de style et des exemples réécrits, fictifs. Trois genres (remerciement après entretien, proposition commerciale, négociation entre entreprises) n'ont pas encore de corpus daté ; vos propres textes sont le meilleur moyen de les compléter.
+Le dépôt ne recopie aucun texte source. Il décrit des traits de style et donne des exemples réécrits, fictifs. Trois genres (remerciement après entretien, proposition commerciale, négociation entre entreprises) n'ont pas encore de corpus daté ; vos propres textes sont le meilleur moyen de les compléter.
 
 ## Limites
 
