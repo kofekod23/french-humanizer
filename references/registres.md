@@ -384,6 +384,316 @@ Les six profils suivants couvrent la presse et l'encyclopédie. Ils vont du regi
 
 ---
 
+# Information, opinion, commerce et documentation
+
+Onze profils de plus, pour les textes qu'on rencontre le plus souvent au travail : informer (dépêche, presse régionale), convaincre (éditorial), vendre (fiche produit, page de marque), expliquer à des pros (presse B2B, article tech) documenter (README, documentation technique), tester (presse hi-fi) et s'entraider (forum). Corpus daté de 2021 au plus tard, avant la diffusion des assistants de rédaction grand public (fin 2022).
+
+**Leçon commune.** Plusieurs motifs du catalogue apparaissent chez les humains de ce corpus : « pas X, mais Y » et chute en fragments dans un éditorial du Monde, triades et phrases nominales dans une page Apple, hyperboles en série dans un texte constructeur de 2013. Ce qui distingue l'humain : le procédé est rare, il porte un fait ou un chiffre précis, et il est propre à son sujet. Une IA l'applique partout, à vide, et de façon interchangeable.
+
+---
+
+## 13. Dépêche d'agence (AFP)
+
+**Corpus :** dépêche AFP reprise par Le Figaro.fr, 16 juin 2017, sur une voiture chargée de bouteilles de gaz à Chasse-sur-Rhône (Isère).
+
+**Observé chez les humains**
+- Pyramide inversée : la première phrase dit qui, quoi, où, et finit par l'attribution (« a annoncé la préfecture »).
+- Attribution systématique par des verbes neutres : a déclaré, a annoncé, a dit, a précisé. Le titre et la fonction de la personne citée sont donnés à la première mention.
+- Citations courtes entre guillemets, insérées dans la phrase, souvent des fragments de déclaration officielle.
+- Chiffres exacts (14 bouteilles de 13 kg, « vers 13h30 », « plus d'une centaine de gendarmes »), lieux situés pour un lecteur extérieur (« entre Vienne et Lyon sur les bords du Rhône »).
+- Aucun adjectif de jugement, aucune conclusion : le dernier paragraphe donne le contexte chronologique, puis le texte s'arrête.
+
+**Ce que fait une IA**
+- Ouvre par le contexte ou l'émotion (« Une scène pour le moins inquiétante s'est déroulée… »), retarde le fait.
+- Remplace l'attribution par des formules vagues (« selon les autorités », « d'après plusieurs sources »).
+- Termine par une réflexion (« Cet événement rappelle l'importance de la vigilance… »).
+
+**À viser :** fait principal et source dans la première phrase, une attribution par information, chiffres exacts, fin sur le contexte.
+
+**Avant :**
+> Une scène pour le moins inquiétante a secoué la petite commune de Valbrune ce vendredi. En effet, un véhicule suspect a mobilisé de nombreux moyens, soulignant ainsi la vigilance accrue des autorités dans un contexte sensible.
+
+**Après :**
+> Un véhicule contenant six bidons d'essence a été découvert vendredi à Valbrune (Drôme), entraînant l'évacuation de la gare pendant deux heures, a annoncé la préfecture. Son propriétaire a été placé en garde à vue, a précisé le parquet de Valence.
+
+(Commune et faits fictifs.)
+
+---
+
+## 14. Presse quotidienne régionale
+
+**Corpus :** rubrique faits divers du Journal du Gers, 30 août 2016.
+
+**Observé chez les humains**
+- Brèves d'une ou deux phrases, chacune ouverte par le nom de la commune en capitales.
+- Empilement des circonstances : jour (« dimanche 28 août »), moment, lieu-dit ou quartier, intervenants (gendarmes, pompiers).
+- Âges donnés seulement quand ils éclairent le fait (le conducteur de 21 ans, les randonneurs de 69 et 71 ans).
+- Passé composé pour les faits, présent pour l'enquête en cours, futur pour la suite judiciaire.
+- Vocabulaire administratif et de gendarmerie (préjudice, maîtrisé, convoqué), ton sobre, avec parfois une exclamation dans un récit de sauvetage.
+
+**Ce que fait une IA**
+- Écrit un paragraphe là où il faut une brève, ajoute de l'émotion et une morale (« un rappel que la prudence reste de mise sur nos routes »).
+- Oublie le lieu précis ou la date, qui sont l'essentiel pour un lecteur local.
+
+**À viser :** commune, date, lieu précis, fait, intervenants, suite. Une à trois phrases.
+
+**Avant :**
+> Un accident spectaculaire a eu lieu ce week-end dans notre belle région. Fort heureusement, grâce à l'intervention rapide et efficace des secours, le pire a pu être évité. Une piqûre de rappel sur l'importance de la prudence au volant.
+
+**Après :**
+> SAINT-ORENS. Dimanche vers 2 heures, une voiture conduite par un homme de 23 ans a quitté la route au lieu-dit Le Pradel et fini dans un fossé. Légèrement blessé, il a été conduit à l'hôpital d'Auch. Les gendarmes ont ouvert une enquête.
+
+(Faits fictifs.)
+
+---
+
+## 15. Éditorial
+
+**Corpus :** éditorial du Monde, « Brexit, dur ou doux, mais rapide », 14 juin 2017.
+
+**Observé chez les humains**
+- La thèse est posée dès le premier paragraphe et répétée sous des formes différentes jusqu'à la fin.
+- Faits datés au service de l'argument : article 50, 29 mars 2019, référendum du 23 juin 2016, ouverture des négociations le 19 juin.
+- Procédés rhétoriques assumés : questions, images (« larguer les amarres », « la falaise »), comparaison familière (payer son solde comme quand on quitte une copropriété), énumération en « D'abord… Ensuite… Enfin… ».
+- On y trouve un « Il n'est pas question de… mais de… », un « on » éditorial (« On continue de penser que… ») et une chute en fragments (« Et partir. Vite. »). Ces motifs IA sont ici humains, parce qu'ils sont rares, qu'ils portent la thèse et qu'ils arrivent après les faits.
+- Tirets d'incise et anglicismes entre guillemets avec leur traduction.
+
+**Ce que fait une IA**
+- Équilibre le pour et le contre sans trancher, ou tranche sans fait daté.
+- Multiplie les chutes et les « pas X, mais Y » dans chaque paragraphe, et finit sur une généralité (« L'avenir nous le dira »).
+
+**À viser :** une thèse claire, des faits datés qui la portent, un ou deux procédés forts au maximum, une fin qui reprend la thèse. Si l'auteur ne veut pas de tirets, les incises passent entre virgules ou parenthèses.
+
+**Avant :**
+> Le débat sur le télétravail soulève des questions essentielles. D'un côté, il offre une flexibilité appréciable ; de l'autre, il comporte des risques. Ce n'est pas seulement une question d'organisation, c'est une question de société. L'avenir dira quel modèle s'imposera.
+
+**Après :**
+> Le télétravail n'a pas besoin d'une loi de plus, il a besoin de règles d'entreprise écrites. Depuis mars, la moitié des salariés de bureau travaillent de chez eux sans savoir à quelle heure ils peuvent couper leur téléphone. Que chaque employeur publie ses horaires de joignabilité. Et s'y tienne.
+
+(Chiffre fictif.)
+
+---
+
+## 16. Presse professionnelle B2B
+
+**Corpus :** article du Journal du Net, rubrique DSI, sur le volume de données numériques prévu pour 2020, mis à jour le 19 juin 2017.
+
+**Observé chez les humains**
+- Chapeau qui donne le chiffre et la source en deux phrases (« C'est ce que montre cette infographie de notre partenaire »).
+- Conditionnel pour les projections (« pourrait atteindre », « devraient renvoyer »), « Soit » pour convertir ou comparer (« soit 44 milliards de téraoctets », « Soit une hausse de 10 points comparé à 2013 »).
+- Source précise de l'estimation (étude d'un cabinet nommé), base de comparaison datée.
+- Jargon du secteur sans explication (mégadonnées, systèmes embarqués, terminaux mobiles), anglicismes courants (« digitales »), « Hexagone » pour la France. Typographie parfois relâchée (« 27% » sans espace).
+- Article court, sans conclusion, suivi d'un renvoi vers un autre article.
+
+**Ce que fait une IA**
+- « Dans un contexte de transformation digitale accélérée, les entreprises font face à des défis majeurs… » sans un chiffre.
+- Explique le jargon à un lectorat qui le connaît, conclut par des recommandations génériques.
+
+**À viser :** chiffre, source, comparaison, conditionnel pour les projections ; pas d'explication de ce que le lecteur pro sait déjà ; s'arrêter quand l'information est donnée.
+
+**Avant :**
+> À l'heure où la transformation digitale s'accélère, la cybersécurité s'impose comme un enjeu majeur pour les entreprises. Face à des menaces toujours plus sophistiquées, il est essentiel d'adopter une approche proactive et globale.
+
+**Après :**
+> 38 % des PME françaises ont subi au moins une attaque par rançongiciel en 2019, selon le baromètre annuel du cabinet Ortalis. Soit huit points de plus qu'en 2018. Les sauvegardes hors ligne restent rares : 21 % des répondants en disposent.
+
+(Cabinet et chiffres fictifs.)
+
+---
+
+## 17. Fiche produit e-commerce
+
+**Corpus :** fiches LDLC.com archivées : écran Samsung 23 pouces SyncMaster S23C650D (référencé en juin 2013, page de février 2014, avec trois avis clients) et SSD SanDisk Plus 240 Go (février 2018).
+
+**Observé chez les humains**
+- Deux voix très différentes sur la même page.
+  - **Le texte constructeur**, souvent traduit de l'anglais : impératifs en série (« Optimisez », « Profitez », « Testez »), hyperboles (« explosion de couleurs », « Avec ce moniteur, plus besoin de PC ! »), slogans en triade (« Performance, vitesse et silence ! »), et des incohérences humaines : unités mélangées (530 MB/S puis 530 Mb/S, °F avant °C), consommation en veille annoncée à 0,1 W dans le texte et 0,3 W dans la fiche technique.
+  - **La fiche technique** : liste de champs normalisés, chiffres exacts, unités (cd/m², ms, mm, kg).
+  - **Les avis clients** : concrets et datés par l'usage (« Voici une semaine que j'ai reçu cet écran »), abréviations (« temps de rép. », « pb »), « Bémols : » suivi de griefs précis (câble d'alimentation d'un mètre, trop court).
+- Le marketing creux existait donc avant l'IA. Ce qui le rendait lisible : il s'appuyait sur une fiche technique précise juste en dessous.
+
+**Ce que fait une IA**
+- Produit un texte lisse et cohérent, sans aucune spécification : « Découvrez un écran au design élégant, idéal pour le travail comme pour les loisirs. Que vous soyez professionnel ou gamer… »
+- Met des listes à étiquettes en gras (« **Design :** », « **Performance :** »), un paragraphe final d'appel à l'achat.
+
+**À viser :** chaque bénéfice adossé à une caractéristique chiffrée (« angle de vision de 178° », « pied réglable en hauteur et pivot »), une phrase sur l'usage réel, pas de « Que vous soyez… ou… ». On n'imite pas les incohérences ni les fautes : on garde la précision.
+
+**Avant :**
+> Découvrez cet écran au design élégant et moderne, idéal pour le travail comme pour les loisirs. Que vous soyez professionnel ou passionné de jeux vidéo, il saura répondre à toutes vos attentes grâce à sa qualité d'image exceptionnelle.
+
+**Après :**
+> Dalle IPS de 24 pouces en 1920 x 1080, angles de vision de 178° : les couleurs ne virent pas quand on se penche. Le pied monte de 13 cm et pivote en mode portrait, pratique pour relire un long document. Câble HDMI fourni, pas de câble DisplayPort.
+
+(Modèle et caractéristiques fictifs ; dans une vraie fiche, tout vient de la fiche technique.)
+
+---
+
+## 18. Page produit de marque
+
+**Corpus :** page iPhone 12 d'apple.com/fr, archivée le 14 novembre 2020.
+
+**Observé chez les humains**
+- Accroches en phrases nominales et en triades (« Si petit. Si léger. Si puissant. »), jeux de mots (« Basculez du côté obscur » pour le mode Nuit, « H2O ? Ok. »), clins d'œil anglais (« Hello, OLED. »).
+- Chaque slogan est immédiatement suivi d'un chiffre précis : 27 % de lumière en plus, résistance aux chutes multipliée par quatre, 2 Gbit/s, 11 % plus fin, 15 % plus petit, 16 % plus léger, renvois en note.
+- Humour situé et concret (une vidéo Dolby Vision « très pratique lorsque votre chien vous fera pleurer de rire, ou d'émotion »).
+- Vouvoiement, « nous » de la marque, tirets d'incise.
+
+**Ce que fait une IA**
+- Reprend la forme (fragments, triades, « Découvrez ») sans le chiffre ni la blague spécifique : « Puissant. Élégant. Intuitif. Découvrez une expérience révolutionnaire. »
+
+**À viser :** si l'on garde un slogan en fragments, il doit être lié au produit (jeu de mots sur la fonction) et suivi d'un chiffre vérifiable. Sinon, une phrase simple vaut mieux.
+
+**Avant :**
+> Puissant. Élégant. Intuitif. Découvrez une expérience révolutionnaire qui redéfinit les standards de la mobilité moderne.
+
+**Après :**
+> Neuf heures d'autonomie. Assez pour l'aller-retour Paris-Marseille, film compris. La batterie de 4 500 mAh se recharge à moitié en vingt minutes.
+
+(Produit et chiffres fictifs.)
+
+---
+
+## 19. README et documentation de projet
+
+**Corpus :** README de jours-feries-france (Etalab, version 0.6.0 publiée sur PyPI le 8 mai 2020) et de pygrammalecte (version 0.1.0, 31 juillet 2020) ; commentaires d'OpenFisca France 48.0.0 (4 juillet 2019), en complément du profil 3.
+
+**Observé chez les humains**
+- Une phrase pour dire ce que fait le projet (« Cette librairie calcule les jours fériés en France »), une précision honnête sur ce qu'il n'est pas (« ce projet n'est pas Grammalecte, mais un « wrapper » »).
+- Sections courtes et fonctionnelles : Installation, Usage ou Utilisation, Zones disponibles, Données, Sources. Pas de section « Pourquoi ce projet ? » ni « Fonctionnalités clés ».
+- Exemples de code commentés en français à l'intérieur du bloc (« # Obtenir les jours fériés pour une année, pour la métropole »), avec le résultat attendu en commentaire (« # -> True »).
+- Exemples drôles ou bricolés (« texte_bidon », phrases avec fautes volontaires pour tester le correcteur).
+- Petites fautes et anglicismes (« librairie » pour bibliothèque, « fortement recommandé » mal accordé), lien vers la source officielle des données.
+- Commentaires de code qui posent des questions ouvertes (« donc faut-il les nommer caseH1, caseH2… ? ») ou recopient le texte réglementaire.
+
+**Ce que fait une IA**
+- Titres à émojis (« 🚀 Fonctionnalités clés »), badges en série, paragraphe d'introduction promotionnel (« une solution puissante et intuitive pour… »), section « Contribuer » générique, conclusion « Bon codage ! ».
+
+**À viser :** une phrase de description, installation, un exemple qui tourne avec son résultat, les limites connues, la source des données. Le README le plus court qui permet de s'en servir.
+
+**Avant :**
+> # 🚀 DateKit
+> DateKit est une bibliothèque puissante et intuitive qui révolutionne la gestion des dates en Python. Grâce à son API élégante, elle vous permet de manipuler facilement vos dates.
+> ## ✨ Fonctionnalités clés
+> - **Simplicité :** une API facile à prendre en main
+
+**Après :**
+> # DateKit
+> Calcule les jours ouvrés entre deux dates, jours fériés français compris.
+> ```python
+> from datekit import jours_ouvres
+> jours_ouvres("2020-05-01", "2020-05-31")  # -> 18
+> ```
+> Ne gère pas encore les jours fériés locaux d'Alsace-Moselle.
+
+(Projet fictif.)
+
+---
+
+## 20. Article tech sur l'IA (2020-2021)
+
+**Corpus :** Blog du Modérateur, article sur GPT-3 et un blog écrit par IA, 20 août 2020 ; éditorial de Centre Inffo « Qui a peur de l'intelligence artificielle ? », 18 novembre 2020 ; article critique de LADN sur GPT-3, 1er mars 2021.
+
+**Observé chez les humains**
+- Chapeau de deux phrases : le fait, puis la suite attendue.
+- Chiffres concrets et datés : lancement le 11 juillet 2020, une dizaine d'articles publiés, plus de 26 000 visiteurs en deux semaines, 175 milliards de paramètres comparés aux 1,5 milliard de GPT-2.
+- Sources nommées et liées (MIT Technology Review, billet d'origine, blog d'OpenAI), citations de personnes identifiées.
+- Intertitres en questions, enthousiasme tempéré par des réserves précises (biais, « putaclic », détournements) ; pas de conclusion formelle, fin sur la prochaine étape.
+- Côté éditorial : ironie et autodérision (l'auteur se demande si son texte sera le dernier écrit par un humain), questions courtes (« Trop racoleur ? »), titres-jeux de mots.
+
+**Ce que fait une IA**
+- « L'intelligence artificielle révolutionne notre quotidien et ouvre des perspectives fascinantes, tout en soulevant des questions éthiques cruciales. »
+- Aucun chiffre daté, aucune source, conclusion équilibrée générique.
+
+**À viser :** le fait daté, le chiffre comparé, la source nommée, une réserve précise plutôt qu'un « enjeux éthiques » général.
+
+**Avant :**
+> L'intelligence artificielle révolutionne notre quotidien et ouvre des perspectives fascinantes. Toutefois, elle soulève également des questions éthiques cruciales qu'il convient d'aborder avec prudence.
+
+**Après :**
+> Le modèle a rédigé 40 fiches produits en une heure pour un site de jardinage ; l'équipe en a gardé 12 après relecture. Les 28 autres inventaient des dimensions ou mélangeaient deux plantes.
+
+(Exemple fictif.)
+
+---
+
+## 21. Documentation technique
+
+**Corpus :** page « ssh » du wiki de documentation ubuntu-fr, dernière modification le 8 novembre 2018 (version archivée de janvier 2019).
+
+**Observé chez les humains**
+- Une phrase d'objet (« Cette page présente les usages les plus courants de SSH »), puis renvoi vers une page avancée.
+- Impératif et vouvoiement (« Saisissez dans un terminal la commande suivante »), la commande, puis ce qu'elle renvoie (« qui retourne une ligne du type : »).
+- Exemples réalistes avec de faux noms d'utilisateur et des adresses concrètes, notes « N.B. », avertissements appuyés, parfois en capitales (« n'oubliez JAMAIS »).
+- Humour ponctuel (le programme xeyes : « l'œil de Moscou vous regarde depuis votre écran local ! »), aveu de difficulté (« En résumé (car les paragraphes ci-dessous… peuvent sembler confus à certains) »).
+- Texte collaboratif donc inégal : sections très détaillées à côté d'autres sommaires, quelques fautes d'accord, un tableau des directives de configuration avec valeur par défaut et effet.
+- Notes de bas de page, renvois vers forums et sites externes, pas de conclusion.
+
+**Ce que fait une IA**
+- « Dans ce guide complet, nous allons explorer pas à pas… », étapes numérotées toutes de même taille, « Félicitations ! Vous avez configuré… ».
+- Explique ce qu'est un terminal à un lecteur qui configure un serveur, omet le résultat attendu de la commande et les pièges réels.
+
+**À viser :** objet en une phrase, commande, résultat attendu, piège connu, renvoi. Le ton peut rester humain (une remarque, un avertissement franc).
+
+**Avant :**
+> Dans ce guide complet, nous allons explorer étape par étape comment configurer facilement votre serveur. Suivez attentivement ces instructions pour une installation réussie !
+
+**Après :**
+> Installez le paquet `nginx`, puis vérifiez qu'il tourne :
+> `systemctl status nginx` doit afficher « active (running) ». Si le port 80 est déjà pris (Apache installé par défaut sur certaines images), nginx refuse de démarrer : arrêtez Apache d'abord.
+
+---
+
+## 22. Presse hi-fi (banc d'essai)
+
+**Corpus :** banc d'essai d'un amplificateur intégré, signé Lionel Schmitt, 21 novembre 2016 (PDF mis en ligne par un revendeur).
+
+**Observé chez les humains**
+- Fiche technique détaillée : puissance par canal sous 8 et 4 ohms, taux de distorsion, rapport signal sur bruit, transformateur torique et sa puissance en VA, marque des transistors et des condensateurs, nombre de cartes.
+- Écoute organisée par paramètre (grave, médium, aigu, scène sonore, étagement des plans, timbres, dynamique) ou par disque précis.
+- Vocabulaire du métier et images sensorielles (timbres fruités, veloutés), métaphores (un « pur-sang » de la marque).
+- Première personne assumée, aveu de préférence (l'auteur a possédé un modèle antérieur), exclamations courtes au milieu de longues phrases.
+- Défauts relevés concrètement (pas de sortie ligne fixe, connectique perfectible), prix donné, verdict franc.
+
+**Ce que fait une IA**
+- « Un son riche, détaillé et équilibré qui ravira les audiophiles les plus exigeants », sans un disque cité ni une mesure.
+- Aucun défaut, ou un défaut de principe (« le prix peut sembler élevé »).
+
+**À viser :** mesures et composants nommés, écoute rattachée à un disque ou à un passage précis, un avis personnel daté par l'expérience de l'auteur, un vrai défaut, le prix.
+
+**Avant :**
+> Cet amplificateur offre un son riche, détaillé et parfaitement équilibré qui ravira les mélomanes les plus exigeants. Sa scène sonore impressionnante et ses basses profondes en font un choix incontournable.
+
+**Après :**
+> Sur l'ouverture du quatrième mouvement, les contrebasses restent lisibles même au-delà de la mi-course du volume, là où mon ancien intégré commençait à confondre les pupitres. L'aigu est plus réservé : les cymbales manquent un peu d'air. À 1 500 €, la sortie casque aurait mérité mieux qu'un simple réseau de résistances.
+
+(Avis fictif.)
+
+---
+
+## 23. Forum d'entraide grand public
+
+**Corpus :** forum HardWare.fr, sujet « Demande conseil achat », 11 juin 2012, en complément des fils Futura-Sciences (profil 2) et CommentÇaMarche (profil 6).
+
+**Observé chez les humains**
+- Le demandeur écrit un long message décousu (budget, usage, hésitations), avec des fautes courantes (« j'aimerai », « apparement ») et un ton familier.
+- Les réponses sont courtes : une question pour préciser, un lien vers le guide d'achat du forum, un avis tranché.
+- Ironie ou sarcasme envers les demandes vagues, smileys en code texte, abréviations (sav, pc).
+- Prix en euros arrondis, produits désignés de façon vague par le demandeur et précise par ceux qui répondent.
+- Le fil se termine souvent sans conclusion, ou par un « merci » du demandeur.
+
+**Ce que fait une IA**
+- Répond comme un service client : « Excellente question ! Voici quelques conseils pour vous aider à faire le meilleur choix », liste à puces exhaustive, « N'hésitez pas si vous avez d'autres questions ».
+
+**À viser :** réponse courte, une question si la demande est floue, un conseil précis avec un prix ou une référence, un renvoi si un guide existe. Tutoiement si le forum tutoie.
+
+**Avant :**
+> Excellente question ! Le choix d'un ordinateur dépend de nombreux facteurs. Voici quelques conseils pour vous aider à faire le meilleur choix en fonction de vos besoins et de votre budget.
+
+**Après :**
+> Tu fais quoi avec ? Si c'est bureautique et films, n'importe quel portable à 500 € avec un SSD fera l'affaire. Si tu joues, regarde le topic config du forum avant d'acheter, la carte graphique change tout.
+
+---
+
 ## Registre non listé
 
 Appliquer le catalogue de motifs et les règles fixes de `SKILL.md`, puis se demander qui lit, ce qu'il sait déjà et ce qu'il attend d'un texte de ce genre. Un échantillon de la voix de l'auteur, ou deux ou trois textes humains du même genre publiés avant 2020, donnent le meilleur repère.

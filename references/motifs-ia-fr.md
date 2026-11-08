@@ -2,6 +2,8 @@
 
 Les motifs sont numérotés par force et fréquence. Les cinq premiers justifient une correction à la première occurrence. Ceux marqués *faible isolé* ne comptent que lorsque plusieurs indices se retrouvent dans le même passage, car un rédacteur soigneux peut employer chacun d'eux à dessein. Tous les exemples sont originaux.
 
+**Un motif n'est pas une preuve.** Le corpus humain d'avant 2020 contient plusieurs de ces procédés : « pas X, mais Y » et chute en fragments dans un éditorial du Monde (2017), triades et phrases nominales sur une page Apple (2020), hyperboles en série dans un texte constructeur (2013), « révolutionnaire » et « incontournable » dans Wikipédia (2019). Chez l'humain, le procédé est rare, propre au sujet et adossé à un fait ou un chiffre. On corrige ce qui est appliqué à vide, pas chaque occurrence.
+
 La base est le guide « Signs of AI writing » du WikiProject AI Cleanup, tel que repris par blader/humanizer, complété par des tics propres au français (calques de l'anglais, titres en capitales, connecteurs en série, nominalisations).
 
 ## A. Mettre en scène au lieu d'affirmer

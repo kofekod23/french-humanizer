@@ -5,9 +5,9 @@
 ![Claude Code skill](https://img.shields.io/badge/Claude%20Code-skill-d97757)
 ![Python 3](https://img.shields.io/badge/Python-3.8%2B-3776AB)
 
-**French Humanizer** est une skill pour Claude Code et Claude.ai qui réécrit un texte français généré par une IA (ChatGPT, Claude, Gemini, Mistral…) pour qu'il sonne écrit par une personne, **sans changer ce qu'il dit**. C'est l'adaptation française de [blader/humanizer](https://github.com/blader/humanizer), avec un catalogue de motifs propre au français et des profils de registre établis sur des textes humains publiés avant 2020.
+**French Humanizer** est une skill pour Claude Code et Claude.ai qui réécrit un texte français généré par une IA (ChatGPT, Claude, Gemini, Mistral…) pour qu'il sonne écrit par une personne, **sans changer ce qu'il dit**. C'est l'adaptation française de [blader/humanizer](https://github.com/blader/humanizer), avec un catalogue de motifs propre au français et des profils de registre établis sur des textes humains publiés avant 2020 (jusqu'en 2021 pour quelques genres récents), lus dans leur version archivée pour garantir leur date.
 
-> **English.** French Humanizer is an agent skill for Claude Code, Claude.ai and other skill-compatible agents that removes the signs of AI-generated writing from **French** text. It ships 32 French-specific AI writing patterns, twelve register profiles (legal, electronics, code comments, cover letters, formal and informal letters, encyclopedic, sports, business, car and literary press, light buzz media) built from pre-2020 human writing, and a dependency-free Python scanner usable in CI.
+> **English.** French Humanizer is an agent skill for Claude Code, Claude.ai and other skill-compatible agents that removes the signs of AI-generated writing from **French** text. It ships 32 French-specific AI writing patterns, twenty-three register profiles (legal, electronics, code comments, READMEs, technical docs, hi-fi reviews, forums, cover letters, formal and informal letters, encyclopedic, wire copy, regional, sports, business, B2B, car and literary press, editorials, buzz media, e-commerce product pages, brand pages, AI tech articles) built from human writing published up to 2021, plus a command to add your own emails and texts as a local voice corpus, and a dependency-free Python scanner usable in CI.
 
 ## Pourquoi un humanizer spécifique au français
 
@@ -23,7 +23,7 @@ Les humanizers existants sont pensés pour l'anglais. Un texte IA en français a
 
 Et surtout, un bon texte humain ne s'écrit pas pareil selon qu'il s'agit d'un arrêt de la Cour de cassation, d'une réponse sur un forum d'électronique ou d'un mot aux voisins. La skill commence donc par identifier le registre.
 
-## Les douze registres
+## Les vingt-trois registres
 
 | Registre | Corpus humain d'avant 2020 | Ce que la skill vise |
 |---|---|---|
@@ -39,6 +39,17 @@ Et surtout, un bon texte humain ne s'écrit pas pareil selon qu'il s'agit d'un a
 | Presse automobile | L'argus (2014-2016), Fiches-Auto | Chiffres et unités, rivale nommée, vrai défaut |
 | Presse économique | La finance pour tous (2018) | Chiffre, base de comparaison, cause, limite |
 | Critique littéraire | Le Monde des livres (2005) | Syntaxe soutenue, ruptures de rythme, verdict assumé |
+| Dépêche d'agence | AFP (2017) | Fait et source dès la première phrase |
+| Presse régionale | Journal du Gers (2016) | Commune, date, lieu précis, brève |
+| Éditorial | Le Monde (2017) | Thèse claire, faits datés, un ou deux procédés forts |
+| Presse professionnelle | Journal du Net (2017) | Chiffre, source, conditionnel, pas d'explication superflue |
+| Fiche produit e-commerce | LDLC (2013, 2018) | Chaque bénéfice adossé à une caractéristique chiffrée |
+| Page produit de marque | Apple iPhone 12 (2020) | Slogan lié au produit et suivi d'un chiffre |
+| README | Etalab, pygrammalecte (2020) | Description, installation, exemple avec résultat, limites |
+| Article tech sur l'IA | Blog du Modérateur, Centre Inffo (2020), LADN (2021) | Fait daté, chiffre comparé, source nommée |
+| Documentation technique | Wiki ubuntu-fr (2018) | Commande, résultat attendu, piège connu |
+| Presse hi-fi | Banc d'essai d'amplificateur (2016) | Mesures, disque cité, vrai défaut, prix |
+| Forum d'entraide | HardWare.fr (2012) | Réponse courte, question de précision, renvoi au guide |
 
 Pour la presse, la skill situe d'abord le texte entre registre très léger et registre soutenu : une IA écrit tout au même niveau moyen, un journaliste s'ancre nettement à un bout.
 
@@ -92,6 +103,23 @@ Humanise ce texte (courrier formel) :
 [texte]
 ```
 
+## Ajouter vos propres textes
+
+Enrichissez la skill avec vos mails et vos textes. Vos écrits calibrent la réécriture sur votre voix ; les textes reçus servent d'exemples humains d'un registre.
+
+```bash
+python3 scripts/ajouter.py mail-envoyé mon-mail.txt --registre "mail pro"
+python3 scripts/ajouter.py texte-modèle article.md --registre "article"
+python3 scripts/ajouter.py mail-reçu mail-client.txt --registre "mail client"
+python3 scripts/ajouter.py texte-autre courrier-banque.txt --registre "courrier formel"
+python3 scripts/ajouter.py lister      # ce qui est enregistré
+python3 scripts/ajouter.py profil      # vos habitudes d'écriture, chiffrées
+```
+
+Ou directement dans Claude : `/french-humanizer ajouter mail-envoyé` puis collez le texte.
+
+Le corpus reste sur votre machine (`~/.config/french-humanizer/corpus`), hors du dépôt Git. Un texte « de vous » qui ressemble trop à de la prose IA est signalé, pour ne pas fausser la calibration.
+
 ## Détecteur de texte IA en français (script Python)
 
 `scripts/scan.py` repère les motifs sans rien réécrire et donne un score indicatif de 0 à 100. Python 3, aucune dépendance.
@@ -113,6 +141,7 @@ Il signale le vocabulaire IA, les structures « pas X, mais Y », les tirets, le
 | [`references/registres.md`](references/registres.md) | Profils par registre : traits humains observés, dérives IA, exemple |
 | [`references/sources.md`](references/sources.md) | Corpus d'avant 2020 et méthode |
 | [`scripts/scan.py`](scripts/scan.py) | Repérage automatique |
+| [`scripts/ajouter.py`](scripts/ajouter.py) | Ajout de vos textes au corpus personnel, profil de voix |
 
 ## Ponctuation française
 

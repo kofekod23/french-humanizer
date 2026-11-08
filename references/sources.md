@@ -1,6 +1,6 @@
 # Corpus humain d'avant 2020
 
-Les profils de `registres.md` ont été établis à partir des textes ci-dessous, tous publiés avant 2020. On n'en a tiré que des traits de style (longueur des phrases, formules, ponctuation, vocabulaire, manière de raisonner) et, au plus, de courts fragments. Aucun texte protégé n'est reproduit dans la skill. Les décisions de justice sont des textes officiels librement reproductibles.
+Les profils de `registres.md` ont été établis à partir des textes ci-dessous, publiés avant 2020, et jusqu'en 2021 pour les fiches produits récentes, les README et les articles sur l'IA : les assistants de rédaction grand public datent de fin 2022. Les pages modifiées après 2021 ont été écartées (par exemple un article de Siècle Digital de juillet 2020 mis à jour en 2026). Les pages web sont lues dans leur version archivée par la Wayback Machine quand c'est possible, ce qui garantit leur date. On n'en a tiré que des traits de style (longueur des phrases, formules, ponctuation, vocabulaire, manière de raisonner) et, au plus, de courts fragments. Aucun texte protégé n'est reproduit dans la skill. Les décisions de justice sont des textes officiels librement reproductibles.
 
 | Registre | Source | Date | Ce qui en a été tiré |
 |---|---|---|---|
@@ -22,6 +22,22 @@ Les profils de `registres.md` ont été établis à partir des textes ci-dessous
 | Presse automobile | Fiches-Auto.fr, essai Peugeot 3008 2009-2016 ([page](https://www.fiches-auto.fr/essai-peugeot/essai-279-test-complet-peugeot-3008.php)) | essai de la génération 2009-2016 ; la page reçoit depuis des avis de lecteurs, non utilisés | Ton d'essayeur passionné, qualités et défauts en fragments |
 | Presse buzz | Demotivateur, titres de presse les plus drôles de 2015 ([article](https://www.demotivateur.fr/article-buzz/decouvrez-les-titres-de-presse-les-plus-droles-de-l-annee-2015-c-est-excellent--3890)) | novembre 2015 | Interpellation, « nous » éditorial, liste numérotée |
 | Presse buzz | L'Avenir, « Les 5 pires selfies de 2015 » ([article](https://www.lavenir.net/buzz/2015/12/13/les-5-pires-selfies-de-2015-I7TZRZIRDJFMLJG7TD7IPFXZCM/)) | décembre 2015 | Phrases courtes, intertitres-blagues, ironie légère |
+| Dépêche d'agence | AFP reprise par Le Figaro.fr, voiture et bouteilles de gaz à Chasse-sur-Rhône ([archive](https://web.archive.org/web/20170616201743/http://www.lefigaro.fr/flash-actu/2017/06/16/97001-20170616FILWWW00335-le-proprietaire-d-une-voiture-garee-avec-14-bouteilles-de-gaz-interpelle.php)) | 16 juin 2017 | Pyramide inversée, attribution, chiffres exacts |
+| Presse régionale | Le Journal du Gers, faits divers ([PDF](https://www.lejournaldugers.fr/article/14440-faits-divers.pdf)) | 30 août 2016 | Brèves, commune en capitales, circonstances, vocabulaire de gendarmerie |
+| Éditorial | Le Monde, « Brexit, dur ou doux, mais rapide » ([archive](https://web.archive.org/web/20170615085523/http://www.lemonde.fr//idees/article/2017/06/14/brexit-dur-ou-doux-mais-rapide_5144297_3232.html)) | 14 juin 2017 | Thèse, faits datés, procédés rhétoriques humains (y compris « pas X, mais Y » et fragments) |
+| Presse B2B | Journal du Net, données numériques en 2020 selon Statista ([archive](https://web.archive.org/web/20170623181930/http://www.journaldunet.com/solutions/dsi/1195185-l-univers-numerique-en-2020-pourrait-atteindre-44-zettabytes-selon-statista/)) | 19 juin 2017 | Chapeau chiffré, conditionnel, « Soit », jargon non expliqué |
+| Fiche produit | LDLC, écran Samsung SyncMaster S23C650D et avis clients ([archive](https://web.archive.org/web/20140214201549/http://www.ldlc.com/fiche/PB00149219.html)) | 2013-2014 | Texte constructeur traduit, hyperboles, incohérences, fiche technique, avis concrets |
+| Fiche produit | LDLC, SSD SanDisk Plus 240 Go ([archive](https://web.archive.org/web/20180219073818/https://www.ldlc.com/fiche/PB00208742.html)) | février 2018 | Slogans en triade, unités mélangées, liste de caractéristiques |
+| Page de marque | Apple France, iPhone 12 ([archive](https://web.archive.org/web/20201114202224/https://www.apple.com/fr/iphone-12/)) | 14 novembre 2020 | Fragments, triades et jeux de mots adossés à des chiffres |
+| README | jours-feries-france 0.6.0 (Etalab), paquet PyPI | 8 mai 2020 | Structure minimale, exemples commentés avec résultat |
+| README | pygrammalecte 0.1.0, paquet PyPI | 31 juillet 2020 | Description honnête, exemple bricolé, petites fautes |
+| Code | OpenFisca France 48.0.0, paquet PyPI | 4 juillet 2019 | Commentaires qui posent des questions, recopie du texte réglementaire |
+| Article tech IA | Blog du Modérateur, GPT-3 ([article](https://www.blogdumoderateur.com/gpt-3-intelligence-artificielle-articles/)) | 20 août 2020 | Chapeau, chiffres datés, sources nommées, réserves précises |
+| Article tech IA | Centre Inffo, éditorial « Qui a peur de l'intelligence artificielle ? » ([article](https://www.centre-inffo.fr/?p=371344)) | 18 novembre 2020 | Ironie, autodérision, questions courtes |
+| Article tech IA | LADN, critique de GPT-3 ([article](https://www.ladn.eu/tech-a-suivre/gpt-3-popularite-incarne-pourtant-pire-ia/)) | 1er mars 2021 | Ton critique, ironie, sources (MIT Technology Review), fin abrupte |
+| Documentation technique | Wiki ubuntu-fr, page « ssh », version du 8 novembre 2018 ([archive](https://web.archive.org/web/20190106181238/http://doc.ubuntu-fr.org/ssh)) | 2018 | Impératif, commande puis résultat, avertissements, humour, inégalité collaborative |
+| Presse hi-fi | Banc d'essai d'un amplificateur intégré, Lionel Schmitt ([PDF](https://www.hifilink.fr/wp-content/uploads/2012/12/YBA-Int%C3%A9gr%C3%A9-A100-Heritage-Nov-2016.pdf)) | 21 novembre 2016 | Mesures et composants, écoute par paramètre, première personne, défauts, prix |
+| Forum grand public | HardWare.fr, « Demande conseil achat » ([fil](https://forum.hardware.fr/hfr/Hardware/conseilsachats/demande-conseil-achat-sujet_912080_1.htm)) | 11 juin 2012 | Demande décousue, réponses courtes, renvoi au guide, ironie |
 
 ## Méthode et catalogue des motifs
 

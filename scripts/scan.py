@@ -199,7 +199,9 @@ def analyser(nom: str, brut: str) -> Rapport:
     longueurs = [len(p.split()) for p in phrases]
     r.mots = len(re.findall(r"[\wÀ-ÿ'-]+", texte))
     r.phrases = len(longueurs)
-    if len(longueurs) >= 2:
+    if len(longueurs) == 1:
+        r.longueur_moyenne = float(longueurs[0])
+    elif len(longueurs) >= 2:
         r.longueur_moyenne = round(statistics.mean(longueurs), 1)
         r.coefficient_variation = round(statistics.pstdev(longueurs) / r.longueur_moyenne, 2)
     if len(longueurs) >= 6 and r.coefficient_variation < 0.35:

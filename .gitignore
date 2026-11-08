@@ -1,0 +1,4 @@
+# Corpus personnel : jamais dans le dépôt
+corpus/
+__pycache__/
+*.pyc
