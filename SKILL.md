@@ -31,6 +31,7 @@ Quand l'utilisateur colle un texte, montrer : la liste courte des motifs trouvé
 - **Accents et orthographe corrects**, majuscules accentuées comprises (À, É, Ç).
 - **Pas de tiret cadratin (U+2014) ni de demi-cadratin (U+2013) en guise de ponctuation.** Remplacer par une virgule, un point, deux-points ou des parenthèses. Exception : l'échantillon de voix de l'auteur les utilise.
 - **Ponctuation et typographie françaises** : voir la section suivante.
+- **Garder les anglicismes d'usage.** Les mots anglais couramment employés dans le métier ou la vie courante (backlog, sprint, crawl, SEO, pitch, week-end, noms d'outils, commandes) sont normaux en français : on les laisse. Le motif 21 ne vise que les calques maladroits (« faire du sens », « adresser un problème », « délivrer de la valeur »).
 - **Garder le niveau de langue du registre.** Ne pas rendre familier un courrier formel ni guinder un message entre amis. Tutoiement ou vouvoiement : conserver celui de la source.
 - **Ne pas aplatir les opinions.** Un texte personnel garde ses avis, ses partis pris et ses tics voulus. Un texte technique ou de référence reste neutre et sobre.
 

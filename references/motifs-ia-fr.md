@@ -40,7 +40,7 @@ La base est le guide « Signs of AI writing » du WikiProject AI Cleanup, tel qu
 | 18 | **Autorité empruntée** | « Selon les experts… », « De nombreuses études montrent… » | Nommer la source et ce qu'elle dit, ou retirer. |
 | 19 | **Esquive de être et avoir** | « se positionne comme », « se veut », « constitue », « représente », « dispose de », « bénéficie de », « affiche » | « est », « a ». Exception : « constitue » est d'usage en juridique. |
 | 20 | **Nominalisation et « permettre de »** | « permet de favoriser la mise en place d'une optimisation » | Verbe conjugué et sujet réel : « on règle plus vite ». |
-| 21 | **Calques de l'anglais** | « faire du sens », « adresser un problème », « impacter », « en termes de », « opportunité » pour occasion, « assurez-vous de », « au final », « délivrer de la valeur » | « avoir du sens », « traiter », « toucher », « pour », « occasion », « vérifiez », « finalement », ou plus simple. |
+| 21 | **Calques de l'anglais** | « faire du sens », « adresser un problème », « impacter », « en termes de », « opportunité » pour occasion, « assurez-vous de », « au final », « délivrer de la valeur » | « avoir du sens », « traiter », « toucher », « pour », « occasion », « vérifiez », « finalement », ou plus simple. Les anglicismes d'usage (backlog, sprint, SEO, week-end) restent tels quels. |
 | 22 | **Adverbes d'intensité** (*faible isolé*) | « véritablement », « pleinement », « réellement », « considérablement », « profondément » | Supprimer ou chiffrer. |
 
 ## D. Mise en forme par règle
