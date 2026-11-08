@@ -43,7 +43,7 @@ TYPES = {
 }
 SEUIL_ALERTE_IA = 40  # au-delà, un texte « de l'auteur » ressemble à de la prose IA
 
-TIRETS = "—–"
+TIRETS = "\u2014\u2013"
 OUVERTURES = ("bonjour", "bonsoir", "salut", "coucou", "madame", "monsieur", "cher", "chère", "hello")
 FERMETURES = ("cordialement", "bien à vous", "bien cordialement", "salutations", "à bientôt", "a+",
               "bises", "bisous", "merci", "belle journée", "bonne journée", "à plus")
